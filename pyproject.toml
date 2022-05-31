@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "pyside6-code-tutorial"
+version = "0.1.0"
+description = "用代码实例讲解PySide6"
+authors = ["muzing <muzi2001@foxmail.com>"]
+license = "GPL-3.0"
+
+# 使用清华pypi镜像
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+pyside6 = "^6.3.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
