@@ -12,7 +12,14 @@
 
 ## 简介
 
-之前的 [PyQt-Practice](https://github.com/muziing/PyQt_practice) 项目得到不少好评，目前已有 ![PyQt-Practice Stars](https://img.shields.io/github/stars/muziing/PyQt_practice.svg) 个 Stars。本项目沿用其「以**附有丰富注释**的**可直接运行**的代码讲解知识」的形式，讲解介绍 PySide6。并改进了项目目录结构，更加清晰丰富。希望对你我的 Python-GUI 学习之旅有所帮助。
+之前的 [PyQt-Practice](https://github.com/muziing/PyQt_practice) 项目得到不少好评，目前已有 ![PyQt-Practice Stars](https://img.shields.io/github/stars/muziing/PyQt_practice.svg) 个 Stars。本项目沿用其形式，讲解介绍 **PySide6**。
+
+- 代码中有较详细的注释作为讲解
+- 几乎每个模块（`.py`文件）都可独立运行，展示了各种控件的各种功能属性作用
+- 在自己的机器上实际运行一下，仔细观察一下每个属性值的改变会怎样影响控件的外观行为，可能比静态的文档教程更有效
+- 相比 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，改进了项目目录结构，更加清晰丰富
+
+希望本项目对你我的 Python-GUI 学习之旅有所帮助。
 
 ## 如何使用
 
@@ -21,7 +28,7 @@
 1. Star 本仓库
 2. 通过以下方法之一，获取源码
     1. 克隆仓库（推荐）：`git clone https://github.com/muziing/PySide6-Code-Tutorial.git`
-    2. 下载 zip ：<https://github.com/muziing/PySide6-Code-Tutorial/archive/refs/heads/main.zip>
+    2. 下载 zip：<https://github.com/muziing/PySide6-Code-Tutorial/archive/refs/heads/main.zip>
     3. 查看 [Releases](https://github.com/muziing/PySide6-Code-Tutorial/releases) 界面，下载最新发布版（文件更小）
 3. 进入项目目录
 
@@ -32,10 +39,12 @@
 1. 确保 Python 版本与 [pyproject.toml](./pyproject.toml) 中要求的一致
 2. 按[官方文档](https://python-poetry.org/docs/#installation)提示安装 Poetry
 3. 创建虚拟环境：`poetry env use /full/path/to/python`（注意替换路径）
-4. 安装依赖：`poetry install`
+4. 安装依赖：`poetry install --no-dev`
 5. 使用该虚拟环境： `poetry shell`（或在 PyCharm 等 IDE 中配置）
 
-**方式 B**：其他包管理工具
+> 更多 Poetry 使用方法信息，请参阅其[官方文档](https://python-poetry.org/docs/)。
+
+**方式 B** ：其他包管理工具
 
 1. 使用你喜欢的其他工具创建虚拟环境
 2. `pip install -r requirements.txt`
@@ -56,6 +65,8 @@ TODO 定义项目结构
 PySide6 Code Tutorial 是一个开源项目，非常期待你的参与贡献，共同完善它。
 
 > 推荐阅读：[如何为开源做贡献](https://opensource.guide/zh-hans/how-to-contribute/)
+
+TODO 创建关于贡献的独立文件
 
 ### 报告错误
 
@@ -86,9 +97,13 @@ TODO 贡献代码细则
 
 本仓库使用 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) 许可开源。对本项目的复制、分发和修改，请严格遵守该协议。
 
-为便于使用者在自己的项目/博客文章中使用本仓库的代码片段，作以下约定：
+为便于使用者在自己的项目或博客文章中使用本仓库的代码片段，作以下分享约定：
 
-TODO 分享约定
+| 类型           | 代码行数   | 来自模块           | 使用要求                                                                      |
+|--------------|--------|----------------|---------------------------------------------------------------------------|
+| 少量代码         | < 100  | 单个 `.py` 模块    | 直接复制使用即可，无需声明                                                             |
+| 短片段          | < 500  | 6 个以内 `.py` 模块 | 在代码首行添加 `# 来自 github.com/muziing/PySide6-Code-Tutorial` 注释；如对代码有修改则必须明确声明 |
+| 基于本项目修改衍生的项目 | \> 500 | 多个 `.py` 模块    | 严格遵守 GPLv3 相关要求                                                           |
 
 ## 打赏与捐助
 
