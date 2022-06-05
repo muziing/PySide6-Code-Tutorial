@@ -25,16 +25,16 @@
 
 ## 如何使用
 
-### 获取源代码
+### 一、获取源代码
 
 1. Star 本仓库
-2. 通过以下方法之一，获取源码
-    1. 克隆仓库（推荐）：`git clone https://github.com/muziing/PySide6-Code-Tutorial.git`
-    2. 下载 zip：<https://github.com/muziing/PySide6-Code-Tutorial/archive/refs/heads/main.zip>
-    3. 查看 [Releases](https://github.com/muziing/PySide6-Code-Tutorial/releases) 界面，下载最新发布版（文件更小）
+2. 通过以下方法之一获取源码
+    - 克隆仓库（推荐）：`git clone https://github.com/muziing/PySide6-Code-Tutorial.git`
+    - 下载 zip：<https://github.com/muziing/PySide6-Code-Tutorial/archive/refs/heads/main.zip>
+    - 查看 [Releases](https://github.com/muziing/PySide6-Code-Tutorial/releases) 界面，下载最新发布版（文件更小）
 3. 进入项目目录
 
-### 配置虚拟环境与安装依赖
+### 二、配置虚拟环境与安装依赖
 
 **方式 A** ：[Poetry](https://python-poetry.org/)（推荐）
 
@@ -46,12 +46,23 @@
 
 > 更多 Poetry 使用方法信息，请参阅其[官方文档](https://python-poetry.org/docs/)。
 
-**方式 B** ：其他包管理工具
+**方式 B** ：[venv](https://docs.python.org/zh-cn/3/library/venv.html)（简单易用）
 
-1. 使用你喜欢的其他工具创建虚拟环境
+1. 确保 Python 版本与 [pyproject.toml](./pyproject.toml) 中要求的一致
+2. 创建虚拟环境
+    - Windows: `python -m venv --upgrade-deps venv`
+    - Linux/macOS: `python3 -m venv --upgrade-deps venv`
+3. 激活虚拟环境
+    - Windows: `venv\Scripts\activate`
+    - Linux/macOS: `. venv/bin/activate`
+4. 安装依赖：`pip install -r requirements.txt`
+
+**方式 C** ：其他包管理工具
+
+1. 使用你喜欢的其他工具创建虚拟环境，如 [Pipenv](https://pipenv.pypa.io/)、[Conda](https://www.anaconda.com/) 等
 2. `pip install -r requirements.txt`
 
-### 运行与学习
+### 三、运行与学习
 
 1. 打开感兴趣的 `.py` 模块，运行
 2. 观察该界面/控件效果
