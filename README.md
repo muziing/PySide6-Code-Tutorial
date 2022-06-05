@@ -5,10 +5,12 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/muziing/PySide6-Code-Tutorial)
 ![GitHub forks](https://img.shields.io/github/forks/muziing/PySide6-Code-Tutorial)
 ![License](https://img.shields.io/github/license/muziing/PySide6-Code-Tutorial)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/muziing/PySide6-Code-Tutorial)
 
-![PySide Version](https://img.shields.io/badge/PySide-6.3-blue)
+[![PySide Version](https://img.shields.io/badge/PySide-6.3-blue)](https://doc.qt.io/qtforpython/index.html)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 
 ## 简介
 
@@ -62,36 +64,17 @@ TODO 定义项目结构
 
 ## 贡献
 
-PySide6 Code Tutorial 是一个开源项目，非常期待你的参与贡献，共同完善它。
+PySide6 Code Tutorial 是一个开源项目，非常期待以及感谢你的参与贡献。共同完善这个项目，让它帮助到更多人。
 
-> 推荐阅读：[如何为开源做贡献](https://opensource.guide/zh-hans/how-to-contribute/)
+贡献的方式有很多种，并不一定都需要高超的编程能力：
 
-TODO 创建关于贡献的独立文件
+- 指出错别字、错误拼写等
+- 提议加入新功能、新模块等
+- 参与某个 QWidget 控件相关代码编写
+- 投稿优质 PySide6 相关博文、QSS 样式等
+- ……
 
-### 报告错误
-
-如果在本项目中发现错误（不仅限于代码错误，也可以是文档、注释中的错别字等），请提交一个 [Issue](https://github.com/muziing/PySide6-Code-Tutorial/issues) 以报告该错误。
-
-Issue 中请简洁而清晰地描述该错误的位置、问题、（可选）改进建议。
-
-### 修复错误
-
-如果你认为自己有能力修复某个已有的 [Issue](https://github.com/muziing/PySide6-Code-Tutorial/issues) 或刚刚发现的新问题，请按如下流程进行：
-
-1. （对于新发现的错误）提交一个 Issue，描述其位置、问题
-2. Fork 本仓库
-3. 基于 `dev` 分支的最新提交，新建一个分支，名称为 `Fix #123` （其中 `123` 为 Issue 编号）
-4. 在新分支中修复错误，提交一个 [Pull Request](https://github.com/muziing/PySide6-Code-Tutorial/pulls)
-5. 经代码审核，确认无误后，该分支会被合并入 `dev` 分支，未来将并入 `main` 分支
-
-### 贡献代码
-
-TODO 贡献代码细则
-
-注意事项：
-
-1. 确保已在本地开发环境安装全部「开发依赖项」，详见 [pyproject.toml](./pyproject.toml) 中的 `[tool.poetry.dev-dependencies]`
-2. 尽可能保证代码风格与现有代码一致
+关于为本项目提交贡献的详细信息，请查阅[贡献指南](./CONTRIBUTING.md)。
 
 ## 开源许可与分享约定
 
