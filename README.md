@@ -16,6 +16,7 @@
 
 之前的 [PyQt-Practice](https://github.com/muziing/PyQt_practice) 项目得到不少好评，目前已有 ![PyQt-Practice Stars](https://img.shields.io/github/stars/muziing/PyQt_practice.svg) 个 Stars。本项目沿用其形式，讲解介绍 **PySide6**。
 
+- 使用最新的 Python 与 PySide 版本（目前为`3.10`与`6.3`）
 - 代码中有较详细的注释作为讲解
 - 几乎每个模块（`.py`文件）都可独立运行，展示了各种控件的各种功能属性作用
 - 在自己的机器上实际运行一下，仔细观察一下每个属性值的改变会怎样影响控件的外观行为，可能比静态的文档教程更有效
@@ -71,7 +72,11 @@
 
 ## 项目结构
 
-TODO 定义项目结构
+1. [HelloWorld - PySide 基本结构](./01-HelloWorld-基本结构)：PySide6 程序的基本结构
+2. [QtCore - 非GUI的核心功能](./02-QtCore-非GUI的核心功能)：「信号与槽」通信机制等
+3. [QtWidgets - 常用控件](./03-QtWidgets-常用控件)：按钮、输入框、文本编辑器、下拉菜单、滚动条等等常用控件的功能、用法
+4. [QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)：窗口系统集成、事件处理、OpenGL 等
+5. ……
 
 ## 贡献
 
@@ -101,6 +106,6 @@ PySide6 Code Tutorial 是一个开源项目，非常期待以及感谢你的参�
 
 ## 打赏与捐助
 
-本项目的主要作者/维护者是一名还没有收入的在校学生，如果本项目对你有帮助，希望可以请他喝一杯冰可乐 :beer:。
+本项目的[主要作者/维护者](https://muzing.top/about/)是一名还没有收入的在校学生，如果本项目对你有帮助，希望可以请他喝一杯冰可乐 :beer:。
 
 ![微信收款码](./Resources/Images/muzing-WeChat-Collection-QRCode.png)
