@@ -11,11 +11,11 @@ QWidget 提供了丰富的尺寸设置功能，通过代码可以指定其尺寸
 class MyWidget(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("QWidget 大小与位置")
+        self.setWindowTitle("QWidget 尺寸大小")
         self.setup_ui()
 
     def setup_ui(self) -> None:
-        """设置界面"""
+        """测试功能"""
         self.test_01()
         self.test_02()
         self.test_03()
