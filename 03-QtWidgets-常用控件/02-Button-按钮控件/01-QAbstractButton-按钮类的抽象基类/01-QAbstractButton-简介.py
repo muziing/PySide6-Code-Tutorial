@@ -4,6 +4,9 @@ from PySide6 import QtWidgets, QtGui
 
 """
 QAbstractButton 按钮控件的基类
+
+官方文档：https://doc.qt.io/qtforpython/PySide6/QtWidgets/QAbstractButton.html
+
 1. 提供按钮类通用的方法，如设置文字图标、被点击、键盘快捷键等
 2. 自身不能被实例化，子类可以被实例化
 3. 被 QPushButton、QRadioButton、QCheckBox 等类继承
