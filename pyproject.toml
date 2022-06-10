@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "用代码实例讲解PySide6"
 authors = ["muzing <muzi2001@foxmail.com>"]
 license = "GPL-3.0"
+repository = "https://github.com/muziing/PySide6-Code-Tutorial"
 
 # 使用清华pypi镜像
 [[tool.poetry.source]]
@@ -12,13 +13,13 @@ url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 default = true
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.11"
+python = ">=3.9,<3.11"
 pyside6 = "^6.3.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
 isort = "^5.10.1"
-mypy = "^0.960"
+mypy = "^0.961"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -26,10 +27,10 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 88
-target-version = ['py310']
 
 [tool.isort]
 profile = "black"
+line_length = 88
 
 [tool.mypy]
 python_version = "3.10"
