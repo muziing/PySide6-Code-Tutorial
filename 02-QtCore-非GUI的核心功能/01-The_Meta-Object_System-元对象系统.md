@@ -1,8 +1,10 @@
 # 元对象系统
 
-> 翻译信息
+> 翻译信息：
 >
 > 本文翻译自 PySide6 官方文档 *[The Meta-Object System](https://doc.qt.io/qtforpython/overviews/metaobjects.html)*
+>
+> 协议：本翻译遵守原文档使用的 [GNU Free Documentation License version 1.3](https://www.gnu.org/licenses/fdl-1.3.html) 授权
 >
 > 译者：[muzing](https://muzing.top/about/)
 >
@@ -69,3 +71,7 @@ if (QLabel label = QLabel (obj)) {            label.setText(tr("Ping"))
 虽然可以在没有 `Q_OBJECT` 宏和元对象代码的情况下使用 `QObject` 作为基类，但如果不使用 `Q_OBJECT` 宏，则信号和槽、以及此处描述的其他功能都将不可用。从元对象系统的角度来看，没有元代码的 `QObject` 子类等价于最接近的具有元对象代码的祖先 。这意味着，例如，`className()` 不会返回类的实际名称，而是这个祖先的类名。
 
 因此，我们强烈建议 `QObject` 的所有子类都使用 `Q_OBJECT` 宏，无论它们是否真的使用信号、槽和属性。
+
+------
+
+© 2022 The Qt Company Ltd. Documentation contributions included herein are the copyrights of their respective owners. The documentation provided herein is licensed under the terms of the [GNU Free Documentation License version 1.3](https://www.gnu.org/licenses/fdl-1.3.html) as published by the Free Software Foundation. Qt and respective logos are trademarks of The Qt Company Ltd. in Finland and/or other countries worldwide. All other trademarks are property of their respective owners. 
