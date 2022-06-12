@@ -61,7 +61,7 @@
 **方式 C** ：其他包管理工具
 
 1. 使用你喜欢的其他工具创建虚拟环境，如 [Pipenv](https://pipenv.pypa.io/)、[Conda](https://www.anaconda.com/) 等
-2. `pip install -r requirements.txt`
+2. 安装 [requirements.txt](./requirements.txt) 中描述的依赖项
 
 ### 三、运行与学习
 
@@ -72,11 +72,39 @@
 
 ## 项目结构
 
-1. [HelloWorld - PySide 基本结构](./01-HelloWorld-基本结构)：PySide6 程序的基本结构
-2. [QtCore - 非GUI的核心功能](./02-QtCore-非GUI的核心功能)：「信号与槽」通信机制等
-3. [QtWidgets - 常用控件](./03-QtWidgets-常用控件)：按钮、输入框、文本编辑器、下拉菜单、滚动条等等常用控件的功能、用法
-4. [QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)：窗口系统集成、事件处理、OpenGL 等
-5. ……
+### 主要
+
+| 目录/文件                                                           | 描述                                |
+|-----------------------------------------------------------------|-----------------------------------|
+| [00. PySide Learning - 各种学习资源](./00-PySideLearning-文章教程Demo等资源) | 文章、教程、Demo等资源                     |
+| [01. HelloWorld - PySide 基本结构](./01-HelloWorld-基本结构)            | 新手上路，PySide6 程序的基本结构              |
+| [02. QtCore - 非GUI的核心功能](./02-QtCore-非GUI的核心功能)                 | 「信号与槽」通信机制等                       |
+| [03. QtWidgets - 常用控件](./03-QtWidgets-常用控件)                     | 按钮、输入框、文本编辑器、下拉菜单、滚动条等等常用控件的功能、用法 |
+| [04. QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)       | 事件、窗口系统集成、OpenGL 等                |
+| ……                                                              | ……                                |
+
+### 开发环境与配置相关
+
+| 目录/文件                                          | 描述                |
+|------------------------------------------------|-------------------|
+| [requirements.txt](./requirements.txt)         | 依赖项，运行本项目必备       |
+| [requirements_dev.txt](./requirements_dev.txt) | 开发依赖项，为本项目提交贡献时需要 |
+| [pyproject.toml](./pyproject.toml)             | 项目配置文件            |
+| [poetry.lock](./poetry.lock)                   | Poetry 依赖项版本约束文件  |
+
+### Git 与 GitHub 相关
+
+| 目录/文件                                | 描述         |
+|--------------------------------------|------------|
+| [.gitignore](./.gitignore)           | git 忽略提交规则 |
+| [LICENSE](./LICENSE)                 | 开源许可证文件    |
+| [CONTRIBUTING.md](./CONTRIBUTING.md) | 贡献指南       |
+
+### 其他
+
+| 目录/文件                    | 描述      |
+|--------------------------|---------|
+| [Resources](./Resources) | 图片等静态资源 |
 
 ## 贡献
 
