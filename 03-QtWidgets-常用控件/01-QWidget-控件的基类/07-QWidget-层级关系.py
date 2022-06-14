@@ -46,7 +46,8 @@ class MyWidget(QtWidgets.QWidget):
             # self.label_1.raise_()  # 提高label_1的层级
             self.label_2.stackUnder(self.label_1)  # 使得2在1之下
 
-        button.clicked.connect(test_slot)  # 连接按钮点击信号与槽函数
+        # 连接按钮点击信号与槽函数
+        button.clicked.connect(test_slot)  # type: ignore
 
 
 if __name__ == "__main__":

@@ -27,7 +27,7 @@ class MyWidget(QtWidgets.QWidget):
     def setup_ui(self) -> None:
         """设置界面"""
         self.button = QtWidgets.QPushButton("点击我！", self)
-        self.button.clicked.connect(lambda: print("按钮被点击了"))
+        self.button.clicked.connect(lambda: print("按钮被点击了"))  # type: ignore
         self.button.move(50, 200)
         self.label_1 = QtWidgets.QLabel("PySide", self)
         self.label_1.move(150, 50)

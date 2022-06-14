@@ -57,7 +57,7 @@ class MyWidget(QtWidgets.QWidget):
             # ******************
 
         # 将按钮的点击信号与槽函数绑定，按钮按下则执行槽函数
-        btn.clicked.connect(test_slot)
+        btn.clicked.connect(test_slot)  # type: ignore
 
     def test_03(self) -> None:
         """测试获取尺寸功能"""

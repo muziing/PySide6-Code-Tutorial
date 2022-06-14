@@ -45,8 +45,8 @@ class MyWidget(QtWidgets.QWidget):
         button.resize(150, 150)
         button.move(100, 100)  # 移动按钮控件的位置
 
-        # 将按钮被点击的槽与lambda槽函数连接
-        button.clicked.connect(lambda: print("按钮被点击了"))
+        # 将按钮被点击的信号与lambda槽函数连接
+        button.clicked.connect(lambda: print("按钮被点击了"))  # type: ignore
 
 
 if __name__ == "__main__":
