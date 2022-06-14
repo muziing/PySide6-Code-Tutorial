@@ -1,7 +1,7 @@
 import sys
 from pprint import pprint
 
-from PySide6 import QtWidgets, QtGui
+from PySide6 import QtGui, QtWidgets
 
 """
 QWidget 提供了多种API来获取（访问）其父子控件

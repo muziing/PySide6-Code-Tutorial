@@ -1,6 +1,6 @@
 import sys
 
-from PySide6 import QtWidgets, QtGui
+from PySide6 import QtGui, QtWidgets
 
 """
 QAbstractButton 按钮控件的基类
