@@ -6,7 +6,7 @@ from PySide6 import QtCore, QtGui, QtWidgets
 class MyWidget(QtWidgets.QWidget):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.setWindowTitle("测试模板")
+        self.setWindowTitle("空白测试模板")
         self.resize(800, 600)
         self.setup_ui()
 
@@ -16,7 +16,7 @@ class MyWidget(QtWidgets.QWidget):
 
 
 if __name__ == "__main__":
-    app = QtWidgets.QApplication([])
+    app = QtWidgets.QApplication(sys.argv)
     window = MyWidget()
     window.show()
     sys.exit(app.exec())
