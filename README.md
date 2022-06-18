@@ -1,3 +1,5 @@
+<img src="./Resources/Icons/Qt_for_Python_128px.png" alt="logo" height="120" align="right" />
+
 # PySide6 Code Tutorial
 
 用代码实例讲解 PySide6 ！
@@ -83,7 +85,7 @@
 | [04. QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)       | 事件、窗口系统集成、OpenGL 等                |
 | ……                                                              | ……                                |
 
-### 开发环境与配置相关
+### 其他
 
 | 目录/文件                                          | 描述                |
 |------------------------------------------------|-------------------|
@@ -91,20 +93,10 @@
 | [requirements_dev.txt](./requirements_dev.txt) | 开发依赖项，为本项目提交贡献时需要 |
 | [pyproject.toml](./pyproject.toml)             | 项目配置文件            |
 | [poetry.lock](./poetry.lock)                   | Poetry 依赖项版本约束文件  |
-
-### Git 与 GitHub 相关
-
-| 目录/文件                                | 描述         |
-|--------------------------------------|------------|
-| [.gitignore](./.gitignore)           | git 忽略提交规则 |
-| [LICENSE](./LICENSE)                 | 开源许可证文件    |
-| [CONTRIBUTING.md](./CONTRIBUTING.md) | 贡献指南       |
-
-### 其他
-
-| 目录/文件                    | 描述      |
-|--------------------------|---------|
-| [Resources](./Resources) | 图片等静态资源 |
+| [.gitignore](./.gitignore)                     | git 忽略提交规则        |
+| [LICENSE](./LICENSE)                           | 开源许可证文件           |
+| [CONTRIBUTING.md](./CONTRIBUTING.md)           | 贡献指南              |
+| [Resources](./Resources)                       | 图片等静态资源           |
 
 ## 贡献
 
