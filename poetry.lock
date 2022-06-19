@@ -43,7 +43,7 @@ reference = "tsinghua"
 
 [[package]]
 name = "colorama"
-version = "0.4.4"
+version = "0.4.5"
 description = "Cross-platform colored terminal text."
 category = "dev"
 optional = false
@@ -141,16 +141,16 @@ reference = "tsinghua"
 
 [[package]]
 name = "pyside6"
-version = "6.3.0"
+version = "6.3.1"
 description = "Python bindings for the Qt cross-platform application and UI framework"
 category = "main"
 optional = false
 python-versions = "<3.11,>=3.6"
 
 [package.dependencies]
-PySide6-Addons = "6.3.0"
-PySide6-Essentials = "6.3.0"
-shiboken6 = "6.3.0"
+PySide6-Addons = "6.3.1"
+PySide6-Essentials = "6.3.1"
+shiboken6 = "6.3.1"
 
 [package.source]
 type = "legacy"
@@ -159,15 +159,15 @@ reference = "tsinghua"
 
 [[package]]
 name = "pyside6-addons"
-version = "6.3.0"
+version = "6.3.1"
 description = "Python bindings for the Qt cross-platform application and UI framework (Addons)"
 category = "main"
 optional = false
 python-versions = "<3.11,>=3.6"
 
 [package.dependencies]
-PySide6-Essentials = "6.3.0"
-shiboken6 = "6.3.0"
+PySide6-Essentials = "6.3.1"
+shiboken6 = "6.3.1"
 
 [package.source]
 type = "legacy"
@@ -176,14 +176,14 @@ reference = "tsinghua"
 
 [[package]]
 name = "pyside6-essentials"
-version = "6.3.0"
+version = "6.3.1"
 description = "Python bindings for the Qt cross-platform application and UI framework (Essentials)"
 category = "main"
 optional = false
 python-versions = "<3.11,>=3.6"
 
 [package.dependencies]
-shiboken6 = "6.3.0"
+shiboken6 = "6.3.1"
 
 [package.source]
 type = "legacy"
@@ -192,7 +192,7 @@ reference = "tsinghua"
 
 [[package]]
 name = "shiboken6"
-version = "6.3.0"
+version = "6.3.1"
 description = "Python/C++ bindings helper module"
 category = "main"
 optional = false
@@ -265,8 +265,8 @@ click = [
     {file = "click-8.1.3.tar.gz", hash = "sha256:7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"},
 ]
 colorama = [
-    {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
-    {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
+    {file = "colorama-0.4.5-py2.py3-none-any.whl", hash = "sha256:854bf444933e37f5824ae7bfc1e98d5bce2ebe4160d46b5edf346a89358e99da"},
+    {file = "colorama-0.4.5.tar.gz", hash = "sha256:e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"},
 ]
 isort = [
     {file = "isort-5.10.1-py3-none-any.whl", hash = "sha256:6f62d78e2f89b4500b080fe3a81690850cd254227f27f75c3a0c491a1f351ba7"},
@@ -310,24 +310,24 @@ platformdirs = [
     {file = "platformdirs-2.5.2.tar.gz", hash = "sha256:58c8abb07dcb441e6ee4b11d8df0ac856038f944ab98b7be6b27b2a3c7feef19"},
 ]
 pyside6 = [
-    {file = "PySide6-6.3.0-cp36-abi3-macosx_10_9_universal2.whl", hash = "sha256:2517377c49b5d5c66afc51dab02814d76af1fc7545bf6b76b3d1de86ce9a4507"},
-    {file = "PySide6-6.3.0-cp36-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:53d61ff66bb81a099e71e43e7470060a9141a8e6782d6eb6cc52b9a9cf38730c"},
-    {file = "PySide6-6.3.0-cp36-abi3-win_amd64.whl", hash = "sha256:c2368a0f346935167bf741712772b63dee130b29a9270e018cf9474eef1948a0"},
+    {file = "PySide6-6.3.1-cp36-abi3-macosx_10_9_universal2.whl", hash = "sha256:58b824cb41d549a149a17786326f79a2fa46a1ce94e06397e78ea5707757b052"},
+    {file = "PySide6-6.3.1-cp36-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:bc749968d641af1c516b6b0e00264bffea9cfc2d56dc04766f36e1a313e93a3a"},
+    {file = "PySide6-6.3.1-cp36-abi3-win_amd64.whl", hash = "sha256:947185379c181d5e51b7b6bf2df8d8127c675ea57604d41265c67444d226db26"},
 ]
 pyside6-addons = [
-    {file = "PySide6_Addons-6.3.0-cp36-abi3-macosx_10_9_universal2.whl", hash = "sha256:4937fc42aec85d5dde62b2d47e29d76a63722d2a0d72e11772baa3e9925bf234"},
-    {file = "PySide6_Addons-6.3.0-cp36-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:59e96866abbe468087575b63a697c4b1cc97e65f20874d26d8f0d10f5c8c8728"},
-    {file = "PySide6_Addons-6.3.0-cp36-abi3-win_amd64.whl", hash = "sha256:143228bde402426df9d2b97ac4d8de8e97b7c8d51c76362bcd439dc9e2ab3e86"},
+    {file = "PySide6_Addons-6.3.1-cp36-abi3-macosx_10_9_universal2.whl", hash = "sha256:7a6bb180e41a4c599aa0e93d11e60570d0ebc79c197afccd9c227566dad5d5ef"},
+    {file = "PySide6_Addons-6.3.1-cp36-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:14f4171b15dbdd7d120dc125c84f2eca53bc197182295bfdfdb3bb95b58a46c7"},
+    {file = "PySide6_Addons-6.3.1-cp36-abi3-win_amd64.whl", hash = "sha256:9a933fac75c85bea3a9e31b24926e06b1afebae23cd164f10f2001999ea2692c"},
 ]
 pyside6-essentials = [
-    {file = "PySide6_Essentials-6.3.0-cp36-abi3-macosx_10_9_universal2.whl", hash = "sha256:1c2a2a2b26fc923b3527907462ae5828b7e50a2c0fcf9923b086781af3911060"},
-    {file = "PySide6_Essentials-6.3.0-cp36-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:a486abe04be6270da798eae9c78b40f605008f19d5d9c880b1683783c715882d"},
-    {file = "PySide6_Essentials-6.3.0-cp36-abi3-win_amd64.whl", hash = "sha256:7304353ab13cc9b5b0a86b3487f24b133a68c5b8c1312516510c0d49469f80d8"},
+    {file = "PySide6_Essentials-6.3.1-cp36-abi3-macosx_10_9_universal2.whl", hash = "sha256:55696693325a2de7bf5b56274b534f191032d218d61a948baa95933f6e642e59"},
+    {file = "PySide6_Essentials-6.3.1-cp36-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:e27962beb2cc45fe13a1a1c24a454c3c3c3c3082c4a84bc5dcf6b306979ba013"},
+    {file = "PySide6_Essentials-6.3.1-cp36-abi3-win_amd64.whl", hash = "sha256:fa825c5396a5dfedf59635e904239187e2f2225c7f65917d4e973062c9a6b916"},
 ]
 shiboken6 = [
-    {file = "shiboken6-6.3.0-cp36-abi3-macosx_10_9_universal2.whl", hash = "sha256:ead1cee2fea2566321e725a50070c40a9e67aaa015a20a84a39a9e72ff9b426e"},
-    {file = "shiboken6-6.3.0-cp36-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:e68e3cbb595c3047c4d893b84ef88eb5b23dea4e94241e80f5509dcb6613ad3d"},
-    {file = "shiboken6-6.3.0-cp36-abi3-win_amd64.whl", hash = "sha256:096e6b2254e59729ae61acbb80d09c31ad7ea35b6624ec120c15a35b95c70b69"},
+    {file = "shiboken6-6.3.1-cp36-abi3-macosx_10_9_universal2.whl", hash = "sha256:6393aa330101b098631a88dfb99b6b46794046c7f63b5c1ac93ae2fcef4773ff"},
+    {file = "shiboken6-6.3.1-cp36-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:aad9aa8e7ecd3c889cc789e41abf3990101126b5b02edfcf87f1ef331c9dc45a"},
+    {file = "shiboken6-6.3.1-cp36-abi3-win_amd64.whl", hash = "sha256:cb9cf4ad858e59237642bf6b8be1fe6f19cb090799ff00e4c2643768d73e8ebe"},
 ]
 tomli = [
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
