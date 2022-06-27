@@ -26,10 +26,10 @@ class MyWidget(QtWidgets.QWidget):
         radio_button_1 = QtWidgets.QRadioButton("男", self)
         radio_button_2 = QtWidgets.QRadioButton("女", self)
         radio_button_1.setIcon(
-            QtGui.QIcon("../../../Resources/Icons/flaticon-regular-rounded/mars.png")
+            QtGui.QIcon("../../../Resources/Icons/FlatIcon-regular-rounded/mars.png")
         )
         radio_button_2.setIcon(
-            QtGui.QIcon("../../../Resources/Icons/flaticon-regular-rounded/venus.png")
+            QtGui.QIcon("../../../Resources/Icons/FlatIcon-regular-rounded/venus.png")
         )
         radio_button_1.setShortcut("Alt+M")  # 设置快捷键
         radio_button_2.setShortcut("Alt+F")
