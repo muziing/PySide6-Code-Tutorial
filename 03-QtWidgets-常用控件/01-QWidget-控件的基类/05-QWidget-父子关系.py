@@ -32,7 +32,7 @@ class MyWidget(QtWidgets.QWidget):
         self.label_1 = QtWidgets.QLabel("PySide", self)
         self.label_1.move(150, 50)
         self.label_2 = QtWidgets.QLabel()  # 创建时未指定父控件
-        self.label_2.setPixmap(QtGui.QPixmap("../../Resources/Icons/python_96px.ico"))
+        self.label_2.setPixmap(QtGui.QPixmap("../../Resources/Icons/Python_128px.png"))
         self.label_2.setParent(self)  # 指定父控件
 
     def test_01(self) -> None:

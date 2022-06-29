@@ -24,7 +24,7 @@ class MyWidget(QtWidgets.QWidget):
 
     def setup_ui(self) -> None:
         """设置界面"""
-        icon = QtGui.QIcon("../../../Resources/Icons/python_96px.ico")
+        icon = QtGui.QIcon("../../../Resources/Icons/Python_128px.png")
         # 1. 单个参数
         # button = QtWidgets.QPushButton()
         # button.setParent(self)  # 创建时父对象为None,可用setParent方法指定
