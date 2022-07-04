@@ -39,8 +39,8 @@ Qt.AlignmentFlag 中又分为水平对齐方式与垂直对齐方式，具体有
 |----------------|---------------|----------------------------------|
 | Qt.TabFocus    | 0x1           | 通过键盘Tab键获取焦点                     |
 | Qt.ClickFocus  | 0x2           | 通过鼠标点击获取焦点                       |
-| Qt.StrongFocus | TabFocus \    | ClickFocus \                     | 0x8 | 通过键盘Tab或鼠标点击获取焦点                              |
-| Qt.WheelFocus  | StrongFocus \ | 0x4                              | 在StrongFocus基础上，还支持鼠标滚轮滚动获取焦点            |
+| Qt.StrongFocus | TabFocus \| ClickFocus \| 0x8 | 通过键盘Tab或鼠标点击获取焦点                              |
+| Qt.WheelFocus  | StrongFocus \| 0x4                              | 在StrongFocus基础上，还支持鼠标滚轮滚动获取焦点            |
 | Qt.NoFocus     | 0             | 该控件不接受焦点，QLabel等不需要用户键盘操作的控件的默认值 |
 
 ## T
@@ -64,6 +64,6 @@ Qt.AlignmentFlag 中又分为水平对齐方式与垂直对齐方式，具体有
 | Qt.LinksAccessibleByMouse    | 4                       | 链接高亮显示，并可用鼠标激活                   |
 | Qt.LinksAccessibleByKeyboard | 8                       | 链接可以使用Tab键获得焦点，并通过Enter键激活       |
 | Qt.TextEditable              | 16                      | 文本完全可编辑                          |
-| Qt.TextEditorInteraction     | TextSelectableByMouse \ | TextSelectableByKeyboard \       | TextEditable | 文本编辑器的默认值                                           |
-| Qt.TextBrowserInteraction    | TextSelectableByMouse \ | LinksAccessibleByMouse \         | LinksAccessibleByKeyboard | QTextBrowser的默认值                                         |
+| Qt.TextEditorInteraction     | TextSelectableByMouse \| TextSelectableByKeyboard \| TextEditable | 文本编辑器的默认值                                           |
+| Qt.TextBrowserInteraction    | TextSelectableByMouse \| LinksAccessibleByMouse \| LinksAccessibleByKeyboard | QTextBrowser的默认值                                         |
 
