@@ -43,7 +43,32 @@ Qt.AlignmentFlag 中又分为水平对齐方式与垂直对齐方式，具体有
 | Qt.WheelFocus  | StrongFocus \| 0x4                              | 在StrongFocus基础上，还支持鼠标滚轮滚动获取焦点            |
 | Qt.NoFocus     | 0             | 该控件不接受焦点，QLabel等不需要用户键盘操作的控件的默认值 |
 
+## S
+
+### [ScrollBarPolicy](https://doc.qt.io/qt-6/qt.html#ScrollBarPolicy-enum)
+
+此枚举类型描述了 [QAbstractScrollArea](https://doc.qt.io/qt-6/qabstractscrollarea.html) 滚动条的各种模式。水平滚动条与垂直滚动条的模式相互独立。
+
+| 常量                  | 值   | 描述                                                         |
+| --------------------- | ---- | ------------------------------------------------------------ |
+| Qt.ScrollBarAsNeeded  | 0    | 只有当内容太大而无法容纳时，QAbstractScrollArea 才显示滚动条。此为默认值。 |
+| Qt.ScrollBarAlwaysOff | 1    | QAbstractScrollArea 永不显示滚动条。                         |
+| Qt.ScrollBarAlwaysOn  | 2    | QAbstractScrollArea 总显示一个滚动条。此属性在具有瞬态滚动条的操作系统上被忽略。 |
+
 ## T
+
+### [TextElideMode](https://doc.qt.io/qt-6/qt.html#TextElideMode-enum)
+
+此枚举值指定显示需省略的文本时省略号应出现的位置：
+
+| 常量           | 值   | 描述                       |
+| -------------- | ---- | -------------------------- |
+| Qt.ElideLeft   | 0    | 省略号应出现在文本的开头。 |
+| Qt.ElideRight  | 1    | 省略号应出现在文本的末尾。 |
+| Qt.ElideMiddle | 2    | 省略号应出现在文本的中间。 |
+| Qt.ElideNone   | 3    | 省略号不应出现在文本中。   |
+
+`Qt.ElideMiddle` 通常是最适合 URL 的选择（例如，"http://bugreports.qt.../QTWEBSITE-13/"），而 `Qt.ElideRight` 适合其他字符串。
 
 ### [TextFormat](https://doc.qt.io/qt-6/qt.html#TextFormat-enum)
 
@@ -66,4 +91,3 @@ Qt.AlignmentFlag 中又分为水平对齐方式与垂直对齐方式，具体有
 | Qt.TextEditable              | 16                      | 文本完全可编辑                          |
 | Qt.TextEditorInteraction     | TextSelectableByMouse \| TextSelectableByKeyboard \| TextEditable | 文本编辑器的默认值                                           |
 | Qt.TextBrowserInteraction    | TextSelectableByMouse \| LinksAccessibleByMouse \| LinksAccessibleByKeyboard | QTextBrowser的默认值                                         |
-
