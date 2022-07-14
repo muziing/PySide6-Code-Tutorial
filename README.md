@@ -80,9 +80,10 @@
 |-----------------------------------------------------------------|-----------------------------------|
 | [00. PySide Learning - 各种学习资源](./00-PySideLearning-文章教程Demo等资源) | 文章、教程、Demo等资源                     |
 | [01. HelloWorld - PySide 基本结构](./01-HelloWorld-基本结构)            | 新手上路，PySide6 程序的基本结构              |
-| [02. QtCore - 非GUI的核心功能](./02-QtCore-非GUI的核心功能)                 | 「信号与槽」通信机制等                       |
+| [02. QtCore - 非GUI的核心功能](./02-QtCore-非GUI的核心功能)                 | 元对象系统、「信号与槽」通信机制等                 |
 | [03. QtWidgets - 常用控件](./03-QtWidgets-常用控件)                     | 按钮、输入框、文本编辑器、下拉菜单、滚动条等等常用控件的功能、用法 |
-| [04. QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)       | 事件、窗口系统集成、OpenGL 等                |
+| [04. QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)       | 位图、字体、颜色、键盘快捷键等、事件                |
+| [05. QtWidgets - 进阶话题](./05-QtWidgets-进阶话题)                     | 布局管理器、QSS样式、主窗口控件等                |
 | ……                                                              | ……                                |
 
 ### 其他
@@ -114,7 +115,9 @@ PySide6 Code Tutorial 是一个开源项目，非常期待以及感谢你的参�
 
 ## 开源许可与分享约定
 
-本仓库使用 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) 许可开源。对本项目的复制、分发和修改，请严格遵守该协议。
+### 代码
+
+本仓库中的代码使用 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) 许可开源。对本项目的复制、分发和修改，请严格遵守该协议。
 
 为便于使用者在自己的项目或博客文章中使用本仓库的代码片段，作以下分享约定：
 
@@ -124,7 +127,11 @@ PySide6 Code Tutorial 是一个开源项目，非常期待以及感谢你的参�
 | 短片段          | < 500  | 6 个以内 `.py` 模块 | 在代码首行添加 `# 来自 github.com/muziing/PySide6-Code-Tutorial` 注释；如对代码有修改则必须明确声明 |
 | 基于本项目修改衍生的项目 | \> 500 | 多个 `.py` 模块    | 严格遵守 GPLv3 相关要求                                                           |
 
-## 打赏与捐助
+### 文章
+
+本仓库中的文章，凡未注明作者的，均为 [muzing](https://github.com/muziing) 所著，使用 [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布。
+
+## 打赏
 
 本项目的[主要作者/维护者](https://muzing.top/about/)是一名还没有收入的在校学生，如果本项目对你有帮助，希望可以请他喝一杯冰可乐 :beer:。
 
