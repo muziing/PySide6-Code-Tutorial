@@ -95,7 +95,8 @@
 | [pyproject.toml](./pyproject.toml)             | 项目配置文件            |
 | [poetry.lock](./poetry.lock)                   | Poetry 依赖项版本约束文件  |
 | [.gitignore](./.gitignore)                     | git 忽略提交规则        |
-| [LICENSE](./LICENSE)                           | 开源许可证文件           |
+| [LICENSE](./LICENSE)                           | 代码开源许可证           |
+| [LICENSE-Article](./LICENSE-Article)           | 文章许可协议            |
 | [CONTRIBUTING.md](./CONTRIBUTING.md)           | 贡献指南              |
 | [Resources](./Resources)                       | 图片等静态资源           |
 
