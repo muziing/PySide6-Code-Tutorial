@@ -34,7 +34,9 @@ QTextOption.WrapAtWordBoundaryOrAnywhere      尽可能在单词边界处换行�
 
 ======================================= 只读 =====================================================
 当启用只读功能后，用户只能选中文本，而不能编辑文本。
-只读与不可用（QWidget.setEnabled(False)）的区别在于前者的文本仍可被选中，而后者的无法被选中
+只读与不可用（QWidget.setEnabled(False)）的区别在于前者的文本仍可被选中，而后者的无法被选中。
+只读模式下，有部分键鼠绑定可用，如键盘方向键控制移动等，详细请参考：
+https://doc.qt.io/qt-6/qplaintextedit.html#read-only-key-bindings
 
 .setReadOnly(ro: bool)    设置只读状态
 .isReadOnly() -> bool     返回是否开启了只读
