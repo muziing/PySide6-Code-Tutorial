@@ -39,9 +39,7 @@ class MyWidget(QtWidgets.QWidget):
 
         button.resize(150, 50)  # 调整按钮尺寸
         # 通过计算需要移动的尺寸，令按钮居中
-        button.move(
-            (self.width() - button.width()) // 2, (self.height() - button.height()) // 2
-        )
+        button.move((self.width() - button.width()) // 2, (self.height() - button.height()) // 2)
 
 
 if __name__ == "__main__":

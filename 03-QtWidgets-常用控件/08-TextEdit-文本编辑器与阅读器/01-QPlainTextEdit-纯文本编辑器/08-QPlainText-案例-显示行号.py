@@ -41,9 +41,7 @@ class MyWidget(QtWidgets.QWidget):
 
         @QtCore.Slot(QtCore.QRect, int)
         def scroll_line_num(_, dy: int):  # 用_表示仅占位而不会用到的参数
-            self.line_num_label.move(
-                self.line_num_label.x(), self.line_num_label.y() + dy
-            )
+            self.line_num_label.move(self.line_num_label.x(), self.line_num_label.y() + dy)
 
         self.pte.updateRequest.connect(scroll_line_num)  # type: ignore
 

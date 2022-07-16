@@ -120,9 +120,7 @@ class MyWidget(QtWidgets.QWidget):
             if text:
                 self.pte.setPlainText(text)
             else:
-                self.pte.setPlainText(
-                    "https://github.com/muziing/PySide6-Code-Tutorial"
-                )
+                self.pte.setPlainText("https://github.com/muziing/PySide6-Code-Tutorial")
 
         @QtCore.Slot(bool)
         def undo_redo_enable_test(enable: bool):

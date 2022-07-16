@@ -76,9 +76,7 @@ class MyWidget(QtWidgets.QWidget):
         # self.pte.setWordWrapMode(QtGui.QTextOption.WordWrap)  # 在单词间换行
         # self.pte.setWordWrapMode(QtGui.QTextOption.ManualWrap)  # 同NoWrap
         # self.pte.setWordWrapMode(QtGui.QTextOption.WrapAnywhere)  # 在任意位置换行，可能打断单词
-        self.pte.setWordWrapMode(
-            QtGui.QTextOption.WrapAtWordBoundaryOrAnywhere
-        )  # 尽可能单词间换行，否则任意换行
+        self.pte.setWordWrapMode(QtGui.QTextOption.WrapAtWordBoundaryOrAnywhere)  # 尽可能单词间换行，否则任意换行
         print(self.pte.wordWrapMode())  # 获取单词换行方式
 
     def test_02(self) -> None:

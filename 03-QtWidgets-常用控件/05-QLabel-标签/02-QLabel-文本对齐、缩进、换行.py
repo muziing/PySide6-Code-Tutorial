@@ -69,9 +69,7 @@ class MyWidget(QtWidgets.QWidget):
         label = QtWidgets.QLabel(self)
         # 手动设置尺寸，而非由内容自动设置
         label.resize(300, 300)
-        label.move(
-            (self.width() - label.width()) // 2, (self.height() - label.height()) // 2
-        )
+        label.move((self.width() - label.width()) // 2, (self.height() - label.height()) // 2)
         label.setStyleSheet("background-color: cyan;")
 
         # 注意测试以下三种功能时，会相互影响。
