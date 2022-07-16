@@ -91,3 +91,55 @@ Qt.AlignmentFlag 中又分为水平对齐方式与垂直对齐方式，具体有
 | Qt.TextEditable              | 16                      | 文本完全可编辑                          |
 | Qt.TextEditorInteraction     | TextSelectableByMouse \| TextSelectableByKeyboard \| TextEditable | 文本编辑器的默认值                                           |
 | Qt.TextBrowserInteraction    | TextSelectableByMouse \| LinksAccessibleByMouse \| LinksAccessibleByKeyboard | QTextBrowser的默认值                                         |
+
+## W
+
+### [WindowType](https://doc.qt.io/qt-6/qt.html#WindowType-enum)
+
+此枚举值用于为控件指定各种窗口系统（window-system）属性。它们一般比较少见，但在少数情况下是必要的。其中一些标志取决于底层窗口管理器是否支持。
+
+主要类型包括：
+
+| 常量             | 值                   | 描述                                                         |
+| ---------------- | -------------------- | ------------------------------------------------------------ |
+| Qt.Widget        | 0x00000000           | [QWidget](https://doc.qt.io/qt-6/qwidget.html) 的默认类型。这种类型的控件如果有父控件则作为子控件，若没有父控件则为独立窗口。参见 Qt.Window 和 Qt.SubWindow。 |
+| Qt.Window        | 0x00000001           | 表示该控件是一个窗口，不管该控件是否有父控件，一般带有一个窗口系统框架和一个标题栏。注意如果控件没有父对象，则无法取消设置此标志。 |
+| Qt.Dialog        | 0x00000002 \| Window | 表示该控件是一个应装饰为对话框的窗口（即，一般在标题栏中没有最大化最小化按钮）。这是 [QDialog](https://doc.qt.io/qt-6/qdialog.html) 的默认类型。如果想用它作为模态对话框，它应该从另一个窗口启动，或者有父窗口并与 [QWidget.windowModality](https://doc.qt.io/qt-6/qwidget.html#windowModality-prop) 属性一起使用。如果将其设置为模态，对话框将阻止应用程序中的其他顶级窗口获得任何输入。我们将具有父控件的顶级窗口称为次要窗口（secondary window）。 |
+| Qt.Sheet         | 0x00000004 \| Window | 表示窗口是 macOS 上的 sheet。由于使用 sheet 意味着窗口模式，因此推荐的方法是使用 [QWidget.setWindowModality](https://doc.qt.io/qt-6/qwidget.html#windowModality-prop)() 或 [QDialog::open](https://doc.qt.io/qt-6/qdialog.html#open)() 替代。 |
+| Qt.Popup         | 0x00000008 \| Window | 表示该控件是一个弹出式顶级窗口，即它是模态的，但具有适合弹出式菜单的窗口系统框架。 |
+| Qt.Tool          | Popup \| Dialog      | 表示该控件是一个工具窗口。工具窗口通常是一个小窗口，具有比一般窗口更小的标题栏和装饰，一般用于工具按钮的集合。如果有父控件，则工具窗口将始终保留在其顶部。如果没有父级，也可以考虑使用 Qt::WindowStaysOnTopHint。如果窗口系统支持，工具窗口可以用更轻量的框架来装饰。它也可以与 Qt::FramelessWindowHint 结合使用。在 macOS 上，工具窗口对应于窗口的 [NSPanel](https://developer.apple.com/documentation/appkit/nspanel) 类。这意味着窗口位于普通窗口之上，因此无法在其上层放置普通窗口。默认情况下，当应用程序处于非活动状态时，工具窗口将消失。这可以通过 [Qt.WA_MacAlwaysShowToolWindow](https://doc.qt.io/qt-6/qt.html#WidgetAttribute-enum) 属性来控制。 |
+| Qt.ToolTip       | Popup \| Sheet       | 表明该控件是工具提示。这在内部用于实现工具提示。             |
+| Qt.SplashScreen  | ToolTip \| Dialog    | 表明该窗口是闪屏（splash screen）。这是 [QSplashScreen](https://doc.qt.io/qt-6/qsplashscreen.html) 的默认类型。 |
+| Qt.SubWindow     | 0x00000012           | 表明此控件是子窗口，例如 [QMdiSubWindow](https://doc.qt.io/qt-6/qmdisubwindow.html) 控件。 |
+| Qt.ForeignWindow | 0x00000020 \| Window | 表明此窗口对象是一个句柄，表示由另一个进程或手动使用本地代码创建的本地平台窗口。 |
+| Qt.CoverWindow   | 0x00000040 \| Window | 表示该窗口代表一个覆盖窗口，在某些平台上最小化应用程序时显示。 |
+
+还有许多标志可用于自定义顶级窗口的外观。这对其他窗口没有影响：
+
+| 常量                                   | 值                                                   | 描述                                                         |
+| -------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| Qt.MSWindowsFixedSizeDialogHint        | 0x00000100                                           | 在微软 Windows 上为窗口提供一个细对话框边框。这种风格传统上用于固定大小的对话框。注意：不建议在多显示器环境中使用此标志，因为系统将强制窗口在跨屏幕移动时保持其原始大小，这在使用具有不同分辨率的显示器时尤其不受欢迎。 |
+| Qt.MSWindowsOwnDC                      | 0x00000200                                           | 在微软 Windows 上为窗口提供自己的显示上下文。                |
+| Qt.BypassWindowManagerHint             | 0x00000400                                           | 此标志可用于向平台插件指示应禁用“所有”窗口管理器协议。根据应用程序运行的操作系统和窗口管理器运行的情况，该标志的行为会有所不同。该标志可用于获取未设置配置的本机窗口。 |
+| Qt.X11BypassWindowManagerHint          | BypassWindowManagerHint                              | 完全绕过窗口管理器。这会导致一个完全不受管理的无边框窗口（即，除非手动调用 [QWidget.activateWindow](https://doc.qt.io/qt-6/qwidget.html#activateWindow)()，否则没有键盘输入）。 |
+| Qt.FramelessWindowHint                 | 0x00000800                                           | 生成无边框窗口。用户不能通过窗口系统移动或调整无边框窗口的大小。在 X11 上，标志的结果取决于窗口管理器及其理解 Motif 和/或 NETWM 的能力。大多数现有的现代窗口管理器都可以处理这个问题。 |
+| Qt.NoDropShadowWindowHint              | 0x40000000                                           | 禁用在支持的平台上的窗口投影。                               |
+| Qt.CustomizeWindowHint                 | 0x02000000                                           | 关闭默认窗口标题 hints。                                     |
+| Qt.WindowTitleHint                     | 0x00001000                                           | 为窗口添加标题栏。                                           |
+| Qt.WindowSystemMenuHint                | 0x00002000                                           | 为窗口添加系统菜单，很可能是一个关闭按钮。如果想要隐藏/显示关闭按钮，更好的做法是使用 WindowCloseButtonHint。 |
+| Qt.WindowMinimizeButtonHint            | 0x00004000                                           | 为窗口添加最小化按钮。在某些平台上，这意味着 WindowSystemMenuHint 也已生效。 |
+| Qt.WindowMaximizeButtonHint            | 0x00008000                                           | 为窗口添加最大化按钮。在某些平台上，这意味着 WindowSystemMenuHint 也已生效。 |
+| Qt.WindowMinMaxButtonsHint             | WindowMinimizeButtonHint \| WindowMaximizeButtonHint | 为窗口添加最大化、最小化按钮。在某些平台上，这意味着 WindowSystemMenuHint 也已生效。 |
+| Qt.WindowCloseButtonHint               | 0x08000000                                           | 为窗口添加关闭按钮。在某些平台上，这意味着 WindowSystemMenuHint 也已生效。 |
+| Qt.WindowContextHelpButtonHint         | 0x00010000                                           | 为对话框添加上下文帮助按钮。在某些平台上，这意味着 WindowSystemMenuHint 也已生效。 |
+| Qt.MacWindowToolBarButtonHint          | 0x10000000                                           | 在 macOS 上添加一个工具栏按钮（即，在有工具栏的窗口的右上方的椭圆形按钮） |
+| Qt.WindowFullscreenButtonHint          | 0x80000000                                           | 在 macOS 上添加一个全屏按钮                                  |
+| Qt.BypassGraphicsProxyWidget           | 0x20000000                                           | 如果父控件已经嵌入，则阻止窗口及其子窗口自动将自己嵌入到 QGraphicsProxyWidget 中。如果希望控件始终是桌面上的顶级控件，则可以设置此标志，无论父控件是否已嵌入场景中。 |
+| Qt.WindowShadeButtonHint               | 0x00020000                                           | 如果底层窗口管理器支持，则添加一个阴影按钮替代最小化按钮。   |
+| Qt.WindowStaysOnTopHint                | 0x00040000                                           | 通知窗口系统该窗口应位于所有其他窗口之上。注意，在某些基于 X11 的窗口管理器上，还必须传递 Qt.X11BypassWindowManagerHint 才能使此标志正常工作。 |
+| Qt.WindowStaysOnBottomHint             | 0x04000000                                           | 通知窗口系统该窗口应位于所有其他窗口之下。                   |
+| Qt.WindowTransparentForInput           | 0x00080000                                           | 通知窗口系统该窗口仅用于输出（显示某些内容）而不接受输入。因此输入事件应该像不存在一样略过。 |
+| Qt.WindowOverridesSystemGestures       | 0x00100000                                           | 通知窗口系统该窗口实现了自己的一组手势，系统级的手势（例如三指切换屏幕）应当被禁用。 |
+| Qt.WindowDoesNotAcceptFocus            | 0x00200000                                           | 通知窗口系统该窗口不接受输入焦点。                           |
+| Qt.MaximizeUsingFullscreenGeometryHint | 0x00400000                                           | 通知窗口系统在最大化窗口时应尽可能多地使用可用的屏幕几何空间，包括可能被UI覆盖的区域（例如状态栏或应用程序启动器）。这可能会导致窗口被置于这些系统UI之下，具体情况取决于平台是否支持。启用该标志后，用户负责将 [QScreen.availableGeometry](https://doc.qt.io/qt-6/qscreen.html#availableGeometry-prop)() 也考虑在内，以便应用程序中需要用户交互的任何UI元素都不会被系统UI覆盖。 |
+| Qt.WindowType_Mask                     | 0x000000ff                                           | 用于从窗口标志中提取窗口类型的掩码。                         |
