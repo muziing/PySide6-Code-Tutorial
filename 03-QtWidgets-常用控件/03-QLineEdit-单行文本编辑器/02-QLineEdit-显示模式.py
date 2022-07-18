@@ -18,6 +18,9 @@ QLineEdit.NoEcho              不显示任何内容。常见场景：密码的�
 QLineEdit.Password            显示时用平台决定的密码掩码字符替代真实输入的字符
 QLineEdit.PasswordEchoOnEdit  当字符正在被编辑时显示，否则行为与Password相同()
 
+.text() -> str                返回LineEdit内的文本，与显示模式无关
+.displayText() -> str         返回LineEdit中显示的文本。例如Password模式下可能会获得"*******"
+
 """
 
 
@@ -72,6 +75,7 @@ class MyWidget(QtWidgets.QWidget):
             print(f"密码为：{self.line_edit_2.text()}")
             print(f"编辑时可见的密码为：{self.line_edit_3.text()}")
             print(f"长度也保密的密码为：{self.line_edit_4.text()}")
+            print(f"密码显示为：{self.line_edit_2.displayText()}")
 
         self.button.clicked.connect(test_slot)  # type: ignore
 
