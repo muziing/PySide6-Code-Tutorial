@@ -31,6 +31,17 @@ Qt.AlignmentFlag 中又分为水平对齐方式与垂直对齐方式，具体有
 若需同时设置水平、垂直两个维度的对齐方式，只需将两个Flags用或运算符连接，例如：
 `Qt.AlignCenter` 等价于 `Qt.AlignVCenter | Qt.AlignHCenter`
 
+## C
+
+### [CursorMoveStyle](https://doc.qt.io/qt-6/qt.html#CursorMoveStyle-enum)
+
+此枚举值描述文本光标移动的风格。逻辑风格中，键盘左箭头意味着光标向文本的前方移动（对于从右至左的文本，前方意味着右方）；而视觉风格中，键盘左箭头意味着光标向视觉上的左侧移动，而不考虑文本书写方向。
+
+| 常量                | 值   | 描述                                                         |
+| ------------------- | ---- | ------------------------------------------------------------ |
+| Qt.LogicalMoveStyle | 0    | 在从左至右的文本块内，按下键盘左方向键时减少光标位置，右方向键增加光标位置；在从右向左的文本块内相反。 |
+| Qt.VisualMoveStyle  | 1    | 无论书写方向如何，按下键盘左方向键光标总会向左移动，按下右方向键光标向右移动。 |
+
 ## F
 
 ### [FocusPolicy](https://doc.qt.io/qt-6/qt.html#FocusPolicy-enum)
