@@ -54,6 +54,20 @@ Qt.AlignmentFlag 中又分为水平对齐方式与垂直对齐方式，具体有
 | Qt.WheelFocus  | StrongFocus \| 0x4                              | 在StrongFocus基础上，还支持鼠标滚轮滚动获取焦点            |
 | Qt.NoFocus     | 0             | 该控件不接受焦点，QLabel等不需要用户键盘操作的控件的默认值 |
 
+## L
+
+### [LayoutDirection](https://doc.qt.io/qt-6/qt.html#LayoutDirection-enum)
+
+控制 Qt 的布局与文字方向。
+
+| 常量                   | 值   | 描述         |
+| ---------------------- | ---- | ------------ |
+| Qt.LeftToRight         | 0    | 从左至右布局 |
+| Qt.RightToLeft         | 1    | 从右至左布局 |
+| Qt.LayoutDirectionAuto | 2    | 自动布局     |
+
+对于阿拉伯语、希伯来语等特定语言，需要从右至左布局。
+
 ## S
 
 ### [ScrollBarPolicy](https://doc.qt.io/qt-6/qt.html#ScrollBarPolicy-enum)
