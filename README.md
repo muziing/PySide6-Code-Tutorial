@@ -16,13 +16,13 @@
 
 ## 简介
 
-之前的 [PyQt-Practice](https://github.com/muziing/PyQt_practice) 项目得到不少好评，目前已有 ![PyQt-Practice Stars](https://img.shields.io/github/stars/muziing/PyQt_practice.svg) 个 Stars。本项目沿用其形式，讲解介绍 **PySide6**。
+上一版教程 [PyQt-Practice](https://github.com/muziing/PyQt_practice) 得到不少好评，目前已有 ![PyQt-Practice Stars](https://img.shields.io/github/stars/muziing/PyQt_practice.svg) 个 Stars。本项目沿用其形式，讲解介绍 **PySide6**。
 
 - 使用最新的 Python 与 PySide 版本（目前为`3.10`与`6.3`）
-- 代码中有较详细的注释作为讲解
-- 几乎每个模块（`.py`文件）都可独立运行，展示了各种控件的各种功能属性作用
+- 代码中有详细的注释作为讲解
+- 每个模块（`.py`文件）都可独立运行，展示了各种控件的各种功能属性作用
 - 在自己的机器上实际运行一下，仔细观察一下每个属性值的改变会怎样影响控件的外观行为，可能比静态的文档教程更有效
-- 相比 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，改进了项目目录结构，更加清晰丰富
+- 相比 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，改进了项目目录结构，增加了部分内容，更加清晰丰富
 
 希望本项目对你我的 Python-GUI 学习之旅有所帮助。
 
@@ -67,10 +67,11 @@
 
 ### 三、运行与学习
 
-1. 打开感兴趣的 `.py` 模块，运行
-2. 观察该界面/控件效果
-3. 阅读代码中的注释，可根据提示对特定行进行「注释/取消注释」
-4. 再次运行该模块，观察变化
+1. 打开感兴趣的 `.py` 模块
+2. 阅读文档部分
+3. 运行，观察该界面/控件效果
+4. 阅读代码中的注释，可根据提示对特定行进行「注释/取消注释」
+5. 再次运行该模块，观察变化
 
 ## 项目结构
 
