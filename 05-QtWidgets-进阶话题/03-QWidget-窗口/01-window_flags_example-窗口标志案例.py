@@ -45,27 +45,32 @@ class ControllerWindow(QtWidgets.QWidget):
         创建type单选按钮，并布局到组框中 \n
         :return: None
         """
+
         self.type_groupbox = QtWidgets.QGroupBox("Type")
 
         self.window_radiobutton = self.crate_radiobutton("Window")
         self.dialog_radiobutton = self.crate_radiobutton("Dialog")
         self.sheet_radiobutton = self.crate_radiobutton("Sheet")
-        self.drawer_radiobutton = self.crate_radiobutton("Drawer")
         self.popup_radiobutton = self.crate_radiobutton("Popup")
         self.tool_radiobutton = self.crate_radiobutton("Tool")
         self.tool_tip_radiobutton = self.crate_radiobutton("Tooltip")
         self.splash_screen_radiobutton = self.crate_radiobutton("Splash screen")
+        self.sub_window_radiobutton = self.crate_radiobutton("Sub window")
+        self.foreign_window_radiobutton = self.crate_radiobutton("Foreign window")
+        self.cover_window_radiobutton = self.crate_radiobutton("Cover window")
         self.window_radiobutton.setChecked(True)
 
         layout = QtWidgets.QGridLayout()
         layout.addWidget(self.window_radiobutton, 0, 0)
         layout.addWidget(self.dialog_radiobutton, 1, 0)
         layout.addWidget(self.sheet_radiobutton, 2, 0)
-        layout.addWidget(self.drawer_radiobutton, 3, 0)
-        layout.addWidget(self.popup_radiobutton, 0, 1)
-        layout.addWidget(self.tool_radiobutton, 1, 1)
-        layout.addWidget(self.tool_tip_radiobutton, 2, 1)
-        layout.addWidget(self.splash_screen_radiobutton, 3, 1)
+        layout.addWidget(self.popup_radiobutton, 3, 0)
+        layout.addWidget(self.tool_radiobutton, 4, 0)
+        layout.addWidget(self.tool_tip_radiobutton, 0, 1)
+        layout.addWidget(self.splash_screen_radiobutton, 1, 1)
+        layout.addWidget(self.sub_window_radiobutton, 2, 1)
+        layout.addWidget(self.foreign_window_radiobutton, 3, 1)
+        layout.addWidget(self.cover_window_radiobutton, 4, 1)
         self.type_groupbox.setLayout(layout)
 
     def create_hints_groupbox(self) -> None:
@@ -73,50 +78,55 @@ class ControllerWindow(QtWidgets.QWidget):
         创建hints复选框，并布局到组框中 \n
         :return: None
         """
+
         self.hints_group_box = QtWidgets.QGroupBox("Hints")
 
         self.ms_windows_fixed_size_dialog_checkbox = self.create_checkbox(
             "MS Windows fixed size dialog"
         )
-        self.x11_bypass_window_manager_checkbox = self.create_checkbox(
-            "X11 bypass window manager"
-        )
+        self.bypass_window_manager_checkbox = self.create_checkbox("Bypass window manager")
+        self.x11_bypass_window_manager_checkbox = self.create_checkbox("X11 bypass window manager")
         self.frameless_window_check_box = self.create_checkbox("Frameless window")
         self.window_no_shadow_check_box = self.create_checkbox("No drop shadow")
         self.window_title_check_box = self.create_checkbox("Window title")
         self.window_system_menu_check_box = self.create_checkbox("Window system menu")
-        self.window_minimize_button_check_box = self.create_checkbox(
-            "Window minimize button"
-        )
-        self.window_maximize_button_check_box = self.create_checkbox(
-            "Window maximize button"
-        )
+        self.window_minimize_button_check_box = self.create_checkbox("Window minimize button")
+        self.window_maximize_button_check_box = self.create_checkbox("Window maximize button")
         self.window_close_button_check_box = self.create_checkbox("Window close button")
         self.window_context_help_button_check_box = self.create_checkbox(
             "Window context help button"
         )
         self.window_shade_button_check_box = self.create_checkbox("Window shade button")
         self.window_stays_on_top_check_box = self.create_checkbox("Window stays on top")
-        self.window_stays_on_bottom_check_box = self.create_checkbox(
-            "Window stays on bottom"
-        )
+        self.window_stays_on_bottom_check_box = self.create_checkbox("Window stays on bottom")
         self.customize_window_hint_check_box = self.create_checkbox("Customize window")
+        self.window_transparent_for_input_check_box = self.create_checkbox(
+            "Window transparent for input"
+        )
+        self.ms_windows_own_dc_check_box = self.create_checkbox("MS Windows own DC")
+        self.max_using_full_screen_hint_check_box = self.create_checkbox(
+            "Maximize using full screen"
+        )
 
         layout = QtWidgets.QGridLayout()
         layout.addWidget(self.ms_windows_fixed_size_dialog_checkbox, 0, 0)
-        layout.addWidget(self.x11_bypass_window_manager_checkbox, 1, 0)
-        layout.addWidget(self.frameless_window_check_box, 2, 0)
-        layout.addWidget(self.window_no_shadow_check_box, 3, 0)
-        layout.addWidget(self.window_title_check_box, 4, 0)
-        layout.addWidget(self.window_system_menu_check_box, 5, 0)
+        layout.addWidget(self.ms_windows_own_dc_check_box, 1, 0)
+        layout.addWidget(self.bypass_window_manager_checkbox, 2, 0)
+        layout.addWidget(self.x11_bypass_window_manager_checkbox, 3, 0)
+        layout.addWidget(self.frameless_window_check_box, 4, 0)
+        layout.addWidget(self.window_no_shadow_check_box, 5, 0)
         layout.addWidget(self.customize_window_hint_check_box, 6, 0)
+        layout.addWidget(self.window_title_check_box, 7, 0)
+        layout.addWidget(self.window_system_menu_check_box, 8, 0)
         layout.addWidget(self.window_minimize_button_check_box, 0, 1)
         layout.addWidget(self.window_maximize_button_check_box, 1, 1)
         layout.addWidget(self.window_close_button_check_box, 2, 1)
         layout.addWidget(self.window_context_help_button_check_box, 3, 1)
-        layout.addWidget(self.window_shade_button_check_box, 4, 1)
-        layout.addWidget(self.window_stays_on_top_check_box, 5, 1)
+        layout.addWidget(self.window_stays_on_top_check_box, 4, 1)
+        layout.addWidget(self.window_shade_button_check_box, 5, 1)
         layout.addWidget(self.window_stays_on_bottom_check_box, 6, 1)
+        layout.addWidget(self.window_transparent_for_input_check_box, 7, 1)
+        layout.addWidget(self.max_using_full_screen_hint_check_box, 8, 1)
 
         self.hints_group_box.setLayout(layout)
 
@@ -125,6 +135,7 @@ class ControllerWindow(QtWidgets.QWidget):
         为preview窗口设置新的flags并重新显示
         :return: None
         """
+
         flags: Type[Qt.WindowFlags] = Qt.WindowFlags
 
         if self.window_radiobutton.isChecked():
@@ -133,8 +144,6 @@ class ControllerWindow(QtWidgets.QWidget):
             flags = Qt.Dialog
         elif self.sheet_radiobutton.isChecked():
             flags = Qt.Sheet
-        elif self.drawer_radiobutton.isChecked():
-            flags = Qt.Drawer
         elif self.popup_radiobutton.isChecked():
             flags = Qt.Popup
         elif self.tool_radiobutton.isChecked():
@@ -143,9 +152,17 @@ class ControllerWindow(QtWidgets.QWidget):
             flags = Qt.ToolTip
         elif self.splash_screen_radiobutton.isChecked():
             flags = Qt.SplashScreen
+        elif self.sub_window_radiobutton.isChecked():
+            flags = Qt.SubWindow
+        elif self.foreign_window_radiobutton.isChecked():
+            flags = Qt.ForeignWindow
+        elif self.cover_window_radiobutton.isChecked():
+            flags = Qt.CoverWindow
 
         if self.ms_windows_fixed_size_dialog_checkbox.isChecked():
             flags |= Qt.MSWindowsFixedSizeDialogHint
+        if self.bypass_window_manager_checkbox.isChecked():
+            flags |= Qt.BypassWindowManagerHint
         if self.x11_bypass_window_manager_checkbox.isChecked():
             flags |= Qt.X11BypassWindowManagerHint
         if self.frameless_window_check_box.isChecked():
@@ -172,6 +189,12 @@ class ControllerWindow(QtWidgets.QWidget):
             flags |= Qt.WindowStaysOnBottomHint
         if self.customize_window_hint_check_box.isChecked():
             flags |= Qt.CustomizeWindowHint
+        if self.window_transparent_for_input_check_box.isChecked():
+            flags |= Qt.WindowTransparentForInput
+        if self.ms_windows_own_dc_check_box.isChecked():
+            flags |= Qt.MSWindowsOwnDC
+        if self.max_using_full_screen_hint_check_box.isChecked():
+            flags |= Qt.MaximizeUsingFullscreenGeometryHint
 
         self.preview_window.set_window_flags(flags)
 
@@ -232,11 +255,13 @@ class PreviewWindow(QtWidgets.QWidget):
         :param flags: 窗口标记
         :return: None
         """
+
         self.setWindowFlags(flags)
 
-        text = ""
+        text = ""  # 用于在窗口显示的提示文本
         window_type = flags & Qt.WindowType_Mask
 
+        # 设置窗口类型的提示文本
         if window_type == Qt.Window:
             text = "Qt.Window"
         elif window_type == Qt.Dialog:
@@ -253,9 +278,18 @@ class PreviewWindow(QtWidgets.QWidget):
             text = "Qt.ToolTip"
         elif window_type == Qt.SplashScreen:
             text = "Qt.SplashScreen"
+        elif window_type == Qt.SubWindow:
+            text = "Qt.SubWindow"
+        elif window_type == Qt.ForeignWindow:
+            text = "Qt.ForeignWindow"
+        elif window_type == Qt.CoverWindow:
+            text = "Qt.CoverWindow"
 
+        # 设置窗口标志的提示文本
         if flags & Qt.MSWindowsFixedSizeDialogHint:
             text += "\n|  Qt.MSWindowsFixedSizeDialogHint"
+        if flags & Qt.BypassWindowManagerHint:
+            text += "\n|  Qt.BypassWindowManagerHint"
         if flags & Qt.X11BypassWindowManagerHint:
             text += "\n|  Qt.X11BypassWindowManagerHint"
         if flags & Qt.FramelessWindowHint:
@@ -282,6 +316,12 @@ class PreviewWindow(QtWidgets.QWidget):
             text += "\n|  Qt.WindowStaysOnBottomHint"
         if flags & Qt.CustomizeWindowHint:
             text += "\n|  Qt.CustomizeWindowHint"
+        if flags & Qt.WindowTransparentForInput:
+            text += "\n|  Qt.WindowTransparentForInput"
+        if flags & Qt.MSWindowsOwnDC:
+            text += "\n|  Qt.MSWindowsOwnDC"
+        if flags & Qt.MaximizeUsingFullscreenGeometryHint:
+            text += "\n|  Qt.MaximizeUsingFullscreenGeometryHint"
 
         self.text_edit.setPlainText(text)
 
