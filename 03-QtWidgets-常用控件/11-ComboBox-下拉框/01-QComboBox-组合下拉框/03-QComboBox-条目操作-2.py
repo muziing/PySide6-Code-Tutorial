@@ -4,12 +4,17 @@ from PySide6 import QtWidgets
 
 """
 QComboBox 条目操作
-提供了非常多方法来创建、插入、获取条目
+可以控制用户是否能够以编辑条目的方式添加新条目，以及添加新条目时的细节
+亦可控制条目字符最小数量、最大条目数量、每次可见的最大条目数量等
 
 默认情况下不允许用户编辑条目，但可以设置允许。用户编辑的条目的插入方式由插入策略控制
 .setEditable(editable: bool)
 .isEditable() -> bool
 .setEditText(text: str)
+
+可以控制是否允许用户添加重复的条目，默认不允许
+.setDuplicatesEnabled(enable: bool)
+.duplicatesEnabled() -> bool
 
 插入策略控制着当用户创建了新的条目时该如何插入，QComboBox.InsertPolicy详情见下文
 .setInsertPolicy(policy: QComboBox.InsertPolicy)
@@ -56,6 +61,9 @@ class MyWidget(QtWidgets.QWidget):
 
         # 允许用户编辑条目
         cbb.setEditable(True)
+
+        # 允许用户添加重复项
+        cbb.setDuplicatesEnabled(True)
 
         # 设置插入策略
         # cbb.setInsertPolicy(QtWidgets.QComboBox.NoInsert)
