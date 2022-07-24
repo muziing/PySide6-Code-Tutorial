@@ -48,6 +48,8 @@ class MyWidget(QtWidgets.QWidget):
         self.cbb = QtWidgets.QComboBox(self)
         self.cbb.move(300, 200)
         self.cbb.addItems([str(i) for i in range(100, 105)])  # 通过列表推导式快速添加多个条目
+        self.cbb.setEditable(True)  # 启用可编辑
+        self.cbb.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContents)  # 总是根据内容调整尺寸
 
         self.info_label = QtWidgets.QLabel(self)
         self.info_label.move(300, 300)
