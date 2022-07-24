@@ -5,8 +5,8 @@ from PySide6 import QtCore, QtWidgets
 """
 QAbstractSlider 数值范围、步长、值
 
-可以通过如下方法，限制滑块的最大/小值、页步长（使用PageUp/PageDown键盘按键控制输入时每次按键变化的值）
-、单步长（使用键盘方向键每次按下移动的值）、设置滑块当前值与获取滑块当前值
+可以通过如下方法，限制滑块的最大/小值、页步长（使用PageUp/PageDown键盘按键输入时每次按键变化的值）
+、单步长（使用键盘方向键或鼠标滚轮每次移动的值）、设置滑块当前值与获取滑块当前值
 
 .setMaximum(max: int)        设置最大值，默认为99
 .maximum() -> int            获取当前设置的最大值
@@ -54,7 +54,7 @@ class MyWidget(QtWidgets.QWidget):
         self.slider.setMaximum(200)
         self.slider.setMinimum(20)
 
-        # 步长，通过键盘方向键、PageUp/PageDown测试
+        # 步长，通过键盘方向键、PageUp/PageDown、鼠标滚轮测试
         self.slider.setSingleStep(5)  # 设置单步长
         self.slider.setPageStep(20)  # 设置页步长
 
