@@ -22,15 +22,20 @@ QSpinBox
 .setSingleStep(val: int)        设置单步步长
 .singleStep() -> int            获取当前单步步长
 
+=================================== 步类型 ===================================
+除指定单步步长外，还可以通过将步类型改变为「自适应小数步」来调整步长
+启用AdaptiveDecimalStepType自适应小数步后，步长将变成当前值的低一位，
+例如当前值为12000，则步长变为1000；当前值为120，步长变为10
+更多详细信息请参考文档：https://doc.qt.io/qt-6/qspinbox.html#setStepType
 
-=================================== 前后缀 ===================================
-在数值设定框的LineEdit中，除了显示纯数值，还可以为数值添加前后缀，
-实现例如 $200、45kg 等效果。注意调用text()方法时会获取包含前后缀的完整文本
+.setStepType(QAbstractSpinBox.StepType)
+.stepType() -> QAbstractSpinBox.StepType
 
-.setPrefix(prefix: str)         设置前缀字符串
-.setSuffix(suffix: str)         设置后缀字符串
-.prefix() -> str                获取前缀
-.suffix() -> str                获取后缀
+QAbstractSpinBox.StepType枚举值有如下两种类型：
+https://doc.qt.io/qt-6/qabstractspinbox.html#StepType-enum
+QAbstractSpinBox.DefaultStepType
+QAbstractSpinBox.AdaptiveDecimalStepType
+
 
 """
 
@@ -49,20 +54,18 @@ class MyWidget(QtWidgets.QWidget):
         spinbox.move(200, 200)
 
         # 设置数值范围
-        # spinbox.setRange(100, 200)  # 等价于下面两行
-        spinbox.setMaximum(200)
-        spinbox.setMinimum(100)
+        # spinbox.setRange(10, 2000)  # 等价于下面两行
+        spinbox.setMaximum(2000)
+        spinbox.setMinimum(10)
         print(f"数值范围的最大值为{spinbox.maximum()}")
 
         # 设置单步步长
         spinbox.setSingleStep(10)  # 每次增加/减少10
         print(f"目前的单步步长为{spinbox.singleStep()}")
 
-        # 设置前后缀
-        spinbox.setSuffix(" cm")  # 设置后缀
-        # spinbox.setPrefix("$ ")  # 设置前缀
-        print(f"完整文本为{spinbox.text()}")  # 获取文本时会获取到包含前后缀的完整文本
-        print(f"数值为{spinbox.text().removesuffix(spinbox.suffix())}")  # Python3.9提供的移除后缀方法
+        # 设置步类型
+        # 注意启用自适应小数步后，之前设置的单步步长失效
+        spinbox.setStepType(QtWidgets.QAbstractSpinBox.AdaptiveDecimalStepType)
 
 
 if __name__ == "__main__":
