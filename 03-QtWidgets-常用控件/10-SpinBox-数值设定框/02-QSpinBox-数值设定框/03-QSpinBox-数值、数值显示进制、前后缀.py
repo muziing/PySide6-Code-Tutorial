@@ -21,12 +21,14 @@ QSpinBox
 
 =================================== 前后缀 ===================================
 在数值设定框的LineEdit中，除了显示纯数值，还可以为数值添加前后缀，
-实现例如 $200、45kg 等效果。注意调用text()方法时会获取包含前后缀的完整文本
+实现例如 $200、45kg 等效果。
+注意调用text()方法时会获取包含前后缀的完整文本，而cleanText()可获取纯数值
 
 .setPrefix(prefix: str)         设置前缀字符串
 .setSuffix(suffix: str)         设置后缀字符串
 .prefix() -> str                获取前缀
 .suffix() -> str                获取后缀
+.cleanText() -> str             获取不含前后缀的纯文本
 
 
 """
@@ -57,6 +59,7 @@ class MyWidget(QtWidgets.QWidget):
         # spinbox.setPrefix("$ ")  # 设置前缀
         print(f"完整文本为{spinbox.text()}")  # 获取文本时会获取到包含前后缀的完整文本
         print(f"数值为{spinbox.text().removesuffix(spinbox.suffix())}")  # Python3.9提供的移除后缀方法
+        print(f"数值为{spinbox.cleanText()}")
 
 
 if __name__ == "__main__":
