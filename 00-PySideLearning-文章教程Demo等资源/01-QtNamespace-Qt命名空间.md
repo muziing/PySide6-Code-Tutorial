@@ -119,6 +119,16 @@ Qt.AlignmentFlag 中又分为水平对齐方式与垂直对齐方式，具体有
 
 ## W
 
+### [WindowModality](https://doc.qt.io/qt-6/qt.html#WindowModality-enum)
+
+此枚举值用于控制窗口的模态行为。对话框窗口大多为模态窗口。
+
+| 常量                | 值   | 描述                                                         |
+| ------------------- | ---- | ------------------------------------------------------------ |
+| Qt.NonModal         | 0    | 窗口为非模态，不阻塞其他窗口的输入                           |
+| Qt.WindowModal      | 1    | 窗口对单个窗口结构层次为模态，阻塞对其父窗口（及其的兄弟窗口）、祖父窗口（及其兄弟窗口）的输入 |
+| Qt.ApplicationModal | 2    | 窗口对应用程序为模态，阻塞对所有窗口的输入                   |
+
 ### [WindowType](https://doc.qt.io/qt-6/qt.html#WindowType-enum)
 
 此枚举值用于为控件指定各种窗口系统（window-system）属性。它们一般比较少见，但在少数情况下是必要的。其中一些标志取决于底层窗口管理器是否支持。
