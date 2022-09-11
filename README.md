@@ -83,15 +83,17 @@
 
 ### 主要
 
-| 目录/文件                                                           | 描述                                |
-|-----------------------------------------------------------------|-----------------------------------|
-| [00. PySide Learning - 各种学习资源](./00-PySideLearning-文章教程Demo等资源) | 文章、教程、Demo等资源                     |
-| [01. HelloWorld - PySide 基本结构](./01-HelloWorld-基本结构)            | 新手上路，PySide6 程序的基本结构              |
-| [02. QtCore - 非GUI的核心功能](./02-QtCore-非GUI的核心功能)                 | 元对象系统、「信号与槽」通信机制等                 |
-| [03. QtWidgets - 常用控件](./03-QtWidgets-常用控件)                     | 按钮、输入框、文本编辑器、下拉菜单、滚动条等等常用控件的功能、用法 |
-| [04. QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)       | 位图、字体、颜色、键盘快捷键等、事件                |
-| [05. QtWidgets - 进阶话题](./05-QtWidgets-进阶话题)                     | 布局管理器、QSS样式、主窗口控件等                |
-| ……                                                              | ……                                |
+| 目录/文件                                                           | 描述                                  |
+|-----------------------------------------------------------------|-------------------------------------|
+| [00. PySide Learning - 各种学习资源](./00-PySideLearning-文章教程Demo等资源) | 文章、教程、Demo等资源                       |
+| [01. HelloWorld - PySide 基本结构](./01-HelloWorld-基本结构)            | 新手上路，PySide6 程序的基本结构                |
+| [02. QtCore - 非GUI的核心功能](./02-QtCore-非GUI的核心功能)                 | 元对象系统、「信号与槽」通信机制等                   |
+| [03. QtWidgets - 常用控件](./03-QtWidgets-常用控件)                     | 按钮、输入框、文本编辑器、下拉菜单、滚动条等等常用控件的功能、用法   |
+| [04. QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)       | 位图、字体、颜色、键盘快捷键等、事件                  |
+| [05. QtWidgets - 进阶话题](./05-QtWidgets-进阶话题)                     | 布局管理器、QSS样式、主窗口控件等                  |
+| [06. Model/View - 模型与视图、数据库](./06-ModelView-模型与视图、数据库)          | 模型与视图、与数据库交互                        |
+| [07. Packaging - 打包、静态资源编译](./07-Packaging-打包与静态资源编译)           | 将应用程序打包为 `exe`、将静态资源编译至二进制 `qrc` 文件 |
+| ……                                                              | ……                                  |
 
 ### 其他
 
@@ -104,7 +106,7 @@
 | [.gitignore](./.gitignore)                     | git 忽略提交规则        |
 | [LICENSE](./LICENSE)                           | 代码开源许可证           |
 | [LICENSE-Article](./LICENSE-Article)           | 文章许可协议            |
-| [CONTRIBUTING.md](./CONTRIBUTING.md)           | 贡献指南              |
+| [CONTRIBUTING.md](.github/CONTRIBUTING.md)     | 贡献指南              |
 | [Resources](./Resources)                       | 图片等静态资源           |
 
 ## 贡献
@@ -119,7 +121,7 @@ PySide6 Code Tutorial 是一个开源项目，非常期待以及感谢你的参�
 - 投稿优质 PySide6 相关博文、QSS 样式等
 - ……
 
-关于为本项目提交贡献的详细信息，请查阅[贡献指南](./CONTRIBUTING.md)。
+关于为本项目提交贡献的详细信息，请查阅[贡献指南](.github/CONTRIBUTING.md)。
 
 ## 开源许可与分享约定
 
