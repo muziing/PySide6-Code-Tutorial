@@ -25,7 +25,7 @@ class MyWidget(QtWidgets.QWidget):
 
         # 实例化一个QComboBox,指定父控件为self
         cbb = QtWidgets.QComboBox(self)
-        cbb .move(300, 100)
+        cbb.move(300, 100)
 
         # 添加条目
         cbb.addItem("PySide 6")
