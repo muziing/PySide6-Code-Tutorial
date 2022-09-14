@@ -1,14 +1,12 @@
 <img src="./Resources/Icons/Qt_for_Python_128px.png" alt="logo" height="120" align="right" />
 
-# PySide6 Code Tutorial
+# PySide6 代码式教程
 
 用代码实例讲解 PySide6 ！
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/muziing/PySide6-Code-Tutorial)
-![GitHub forks](https://img.shields.io/github/forks/muziing/PySide6-Code-Tutorial)
 ![License](https://img.shields.io/github/license/muziing/PySide6-Code-Tutorial)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/muziing/PySide6-Code-Tutorial)
-
 [![PySide Version](https://img.shields.io/badge/PySide-6.3-blue)](https://doc.qt.io/qtforpython/index.html)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
@@ -16,15 +14,20 @@
 
 ## 简介
 
-上一版教程 [PyQt-Practice](https://github.com/muziing/PyQt_practice) 得到不少好评，目前已有 ![PyQt-Practice Stars](https://img.shields.io/github/stars/muziing/PyQt_practice.svg) 个 Stars。本项目沿用其形式，讲解介绍 **PySide6**。
+本教程旨在通过可以直接在本地机器上运行的脚本代码讲解介绍 **PySide6**。
 
-- 使用最新的 Python 与 PySide 版本（目前为`3.10`与`6.3`）
-- 代码中有详细的注释作为讲解
-- 每个模块（`.py`文件）都可独立运行，展示了各种控件的各种功能属性作用
+- 代码中以详细的注释作为讲解
+- 每个模块（`.py`文件）都可独立运行，演示了各种控件的各种功能、属性、作用
 - 在自己的机器上实际运行一下，仔细观察一下每个属性值的改变会怎样影响控件的外观行为，可能比静态的文档教程更有效
+- 前身为 GitHub 热度最高的中文 PyQt5 教程 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，目前已有 ![PyQt-Practice Stars](https://img.shields.io/github/stars/muziing/PyQt_practice.svg) 个 Stars
 - 相比 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，改进了项目目录结构，增加了部分内容，更加清晰丰富
+- 使用最新的 Python 与 PySide 版本（目前为`3.10`与`6.3`）
 
 希望本项目对你我的 Python-GUI 学习之旅有所帮助。
+
+![思维导图目录](./Resources/Images/TOC-MindMap.png)
+
+[访问在线思维导图目录](https://www.processon.com/view/link/63034ce01efad47d1247911e)
 
 ## 如何使用
 
@@ -74,12 +77,6 @@
 5. 再次运行该模块，观察变化
 
 ## 项目结构
-
-### 思维导图式目录
-
-![思维导图目录](./Resources/Images/TOC-MindMap.png)
-
-[访问在线思维导图目录](https://www.processon.com/view/link/63034ce01efad47d1247911e)
 
 ### 主要
 
