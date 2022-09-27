@@ -15,10 +15,11 @@ QDir.Filters枚举值详情参见本节附录
 .filter() -> QDir.Filters
 
 ================================ 名称过滤器 ===================================
+支持按文件名称设置过滤器，主要用*通配符与扩展名来限制文件类型
 
 .setNameFilters(filters: Sequence[str])
 .setNameFilter(filter: str)
-.nameFilters() -> Sequence[str]
+.nameFilters() -> List[str]
 
 ============================== 媒体类型过滤器 =================================
 还支持按媒体类型（MIME类型）分类过滤
@@ -28,7 +29,7 @@ QDir.Filters枚举值详情参见本节附录
 关于什么是MIME，可以参考：https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 
 .setMimeTypeFilters(filters: Sequence[str])
-.mimeTypeFilters() -> Sequence[str]
+.mimeTypeFilters() -> List[str]
 """
 
 
@@ -52,6 +53,7 @@ class MyWidget(QtWidgets.QWidget):
 
         # MIME过滤器
         # self.dialog.setMimeTypeFilters(("text/markdown", "image/jpeg", "application/octet-stream"))
+        print(self.dialog.nameFilters())
 
     def setup_ui(self) -> None:
         """设置界面"""
