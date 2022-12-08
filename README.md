@@ -7,7 +7,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/muziing/PySide6-Code-Tutorial)
 ![License](https://img.shields.io/github/license/muziing/PySide6-Code-Tutorial)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/muziing/PySide6-Code-Tutorial)
-[![PySide Version](https://img.shields.io/badge/PySide-6.3-blue)](https://doc.qt.io/qtforpython/index.html)
+[![PySide Version](https://img.shields.io/badge/PySide-6.4-blue)](https://doc.qt.io/qtforpython/index.html)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
@@ -21,7 +21,7 @@
 - 在自己的机器上实际运行一下，仔细观察一下每个属性值的改变会怎样影响控件的外观行为，可能比静态的文档教程更有效
 - 前身为 GitHub 热度最高的中文 PyQt5 教程 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，目前已有 ![PyQt-Practice Stars](https://img.shields.io/github/stars/muziing/PyQt_practice.svg) 个 Stars
 - 相比 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，改进了项目目录结构，增加了部分内容，更加清晰丰富
-- 使用最新的 Python 与 PySide 版本（目前为`3.10`与`6.3`）
+- 使用最新的 Python 与 PySide 版本（目前为`3.10`与`6.4`）
 
 希望本项目对你我的 Python-GUI 学习之旅有所帮助。
 
@@ -89,7 +89,7 @@
 | [04. QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)       | 位图、字体、颜色、键盘快捷键等、事件                  |
 | [05. QtWidgets - 进阶话题](./05-QtWidgets-进阶话题)                     | 布局管理器、QSS样式、主窗口控件等                  |
 | [06. Model/View - 模型与视图、数据库](./06-ModelView-模型与视图、数据库)          | 模型与视图、与数据库交互                        |
-| [07. Packaging - 打包、静态资源编译](./07-Packaging-打包与静态资源编译)           | 将应用程序打包为 `exe`、将静态资源编译至二进制 `qrc` 文件 |
+| [07. Packaging - 静态资源编译、打包](./07-Packaging-资源管理与打包)             | 将应用程序打包为 `exe`、将静态资源编译至二进制 `qrc` 文件 |
 | ……                                                              | ……                                  |
 
 ### 其他
