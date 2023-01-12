@@ -17,8 +17,8 @@ python = ">=3.9,<3.12"
 pyside6 = "^6.4.0"
 
 [tool.poetry.dev-dependencies]
-black = "^22.10.0"
-isort = "^5.10.0"
+black = "^22.12.0"
+isort = "^5.11.0"
 mypy = "^0.991"
 
 [build-system]
