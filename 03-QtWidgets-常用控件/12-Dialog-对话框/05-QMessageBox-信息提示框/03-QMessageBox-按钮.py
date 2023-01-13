@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtWidgets
-
 """
 QMessageBox 按钮
 
@@ -33,6 +29,10 @@ QMessageBox 按钮
 
 """
 
+import sys
+
+from PySide6 import QtWidgets
+
 
 class MyWidget(QtWidgets.QWidget):
     def __init__(self, *args, **kwargs):
@@ -58,17 +58,23 @@ class MyWidget(QtWidgets.QWidget):
         self.message_box.setText("一段对话框正文文本")
 
         # 设置标准按钮
-        self.message_box.setStandardButtons(QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Cancel)
+        self.message_box.setStandardButtons(
+            QtWidgets.QMessageBox.StandardButton.Ok | QtWidgets.QMessageBox.StandardButton.Cancel
+        )
 
         # 设置默认按钮、Esc按钮
-        self.message_box.setDefaultButton(
-            self.message_box.button(QtWidgets.QMessageBox.Ok)
-        )  # 通过.button()方法返回按钮实例
-        self.message_box.setEscapeButton(self.message_box.button(QtWidgets.QMessageBox.Cancel))
+        self.message_box.setDefaultButton(QtWidgets.QMessageBox.StandardButton.Ok)
+        self.message_box.setEscapeButton(
+            self.message_box.button(QtWidgets.QMessageBox.StandardButton.Cancel)
+        )
 
         # 添加按钮
-        self.message_box.addButton("自定义按钮", QtWidgets.QMessageBox.AcceptRole)  # 通过自定义文本与按钮角色添加
-        discard_btn = self.message_box.addButton(QtWidgets.QMessageBox.Discard)  # 添加标准按钮，返回值为按钮实例
+        self.message_box.addButton(
+            "自定义按钮", QtWidgets.QMessageBox.ButtonRole.AcceptRole
+        )  # 通过自定义文本与按钮角色添加
+        discard_btn = self.message_box.addButton(
+            QtWidgets.QMessageBox.StandardButton.Discard
+        )  # 添加标准按钮，返回值为按钮实例
 
         # 获取按钮角色
         print(self.message_box.buttonRole(discard_btn))  # 将discard_btn按钮的角色打印到终端

@@ -9,7 +9,7 @@ QFileDialog 文件对话框
 官方文档：https://doc.qt.io/qtforpython/PySide6/QtWidgets/QFileDialog.html
 继承自 QDialog
 
-有两种构造函数，简介版只可选地传入父控件与窗口标志，完整版可以在创建时定义更多属性功能：
+有两种构造函数，简洁版只可选地传入父控件与窗口标志，完整版可以在创建时定义更多属性功能：
 .__init__(self, parent: QWidget, f: QtCore.Qt.WindowFlags)
 .__init__(self, parent: Optional[QWidget] = None, caption: str = '', directory: str = '', filter: str = '')
 
@@ -26,10 +26,10 @@ class MyWidget(QtWidgets.QWidget):
 
     def setup_dialog(self) -> None:
         """配置对话框属性功能"""
-        self.dialog.setAcceptMode(QtWidgets.QFileDialog.AcceptOpen)  # 打开模式
-        self.dialog.setFileMode(QtWidgets.QFileDialog.ExistingFiles)  # 选择现有文件
-        self.dialog.setLabelText(QtWidgets.QFileDialog.Accept, "选择")  # 为「接受」按键指定文本
-        self.dialog.setLabelText(QtWidgets.QFileDialog.Reject, "取消")  # 为「拒绝」按键指定文本
+        self.dialog.setAcceptMode(QtWidgets.QFileDialog.AcceptMode.AcceptOpen)  # 打开模式
+        self.dialog.setFileMode(QtWidgets.QFileDialog.FileMode.ExistingFiles)  # 选择现有文件
+        self.dialog.setLabelText(QtWidgets.QFileDialog.DialogLabel.Accept, "选择")  # 为「接受」按键指定文本
+        self.dialog.setLabelText(QtWidgets.QFileDialog.DialogLabel.Reject, "取消")  # 为「拒绝」按键指定文本
 
     def setup_ui(self) -> None:
         """设置界面"""

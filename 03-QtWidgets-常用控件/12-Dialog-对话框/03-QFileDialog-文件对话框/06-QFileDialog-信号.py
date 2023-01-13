@@ -41,8 +41,8 @@ class MyWidget(QtWidgets.QWidget):
     def setup_dialog(self) -> None:
         """设置文件对话框"""
 
-        self.dialog.setAcceptMode(QtWidgets.QFileDialog.AcceptOpen)
-        self.dialog.setFileMode(QtWidgets.QFileDialog.ExistingFiles)
+        self.dialog.setAcceptMode(QtWidgets.QFileDialog.AcceptMode.AcceptOpen)
+        self.dialog.setFileMode(QtWidgets.QFileDialog.FileMode.ExistingFiles)
         self.dialog.setNameFilters(
             ("Python files (*.py)", "Markdown files (*.md)", "Any files (*)")
         )

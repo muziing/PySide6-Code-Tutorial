@@ -1,8 +1,3 @@
-import sys
-
-from PySide6 import QtWidgets
-from PySide6.QtCore import Qt
-
 """
 QSlider 刻度
 
@@ -13,16 +8,20 @@ QSlider 刻度
 .tickInterval() -> int                            获取刻度线间隔
 
 
-QSlider.TickPosition枚举值具体有如下数种：
+QSlider.TickPosition 枚举值具体有如下数种：
 https://doc.qt.io/qt-6/qslider.html#TickPosition-enum
-QSlider.NoTicks           不绘制任何刻度线，默认值
-QSlider.TicksBothSides    在滑块两侧都绘制刻度
-QSlider.TicksAbove        在水平滑块上方绘制
-QSlider.TicksBelow        在水平滑块下方绘制
-QSlider.TicksLeft         在垂直滑块左侧绘制
-QSlider.TicksRight        在垂直滑块右侧绘制
-
+QSlider.TickPosition.NoTicks           不绘制任何刻度线，默认值
+QSlider.TickPosition.TicksBothSides    在滑块两侧都绘制刻度
+QSlider.TickPosition.TicksAbove        在水平滑块上方绘制
+QSlider.TickPosition.TicksBelow        在水平滑块下方绘制
+QSlider.TickPosition.TicksLeft         在垂直滑块左侧绘制
+QSlider.TickPosition.TicksRight        在垂直滑块右侧绘制
 """
+
+import sys
+
+from PySide6 import QtWidgets
+from PySide6.QtCore import Qt
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -40,14 +39,15 @@ class MyWidget(QtWidgets.QWidget):
         slider.resize(40, 200)
 
         # 设置滑块刻度线位置
-        slider.setTickPosition(QtWidgets.QSlider.TicksBothSides)
-        # slider.setTickPosition(QtWidgets.QSlider.TicksAbove)
-        # slider.setTickPosition(QtWidgets.QSlider.TicksBelow)
+        slider.setOrientation(Qt.Orientation.Vertical)  # 将滑块方向设置为垂直
+        slider.setTickPosition(QtWidgets.QSlider.TickPosition.TicksBothSides)
+        # slider.setTickPosition(QtWidgets.QSlider.TickPosition.TicksAbove)
+        # slider.setTickPosition(QtWidgets.QSlider.TickPosition.TicksBelow)
 
-        # slider.setOrientation(Qt.Horizontal)  # 将滑块方向设置为水平
+        # slider.setOrientation(Qt.Orientation.Horizontal)  # 将滑块方向设置为水平
         # slider.resize(200, 40)
-        # slider.setTickPosition(QtWidgets.QSlider.TicksLeft)
-        # slider.setTickPosition(QtWidgets.QSlider.TicksRight)
+        # slider.setTickPosition(QtWidgets.QSlider.TickPosition.TicksLeft)
+        # slider.setTickPosition(QtWidgets.QSlider.TickPosition.TicksRight)
 
         # 设置刻度线间距，默认等于PageStep
         slider.setTickInterval(25)

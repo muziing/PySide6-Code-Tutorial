@@ -1,13 +1,12 @@
-import sys
-
-from PySide6 import QtCore, QtWidgets
-
 """
 QPlainText 案例：显示行号
 每当文本文档需要更新显示矩形时，会发射updateRequest信号，垂直滚动量作为参数传出
 利用这个信号，可以编写行号、断点等功能
-
 """
+
+import sys
+
+from PySide6 import QtCore, QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -24,7 +23,7 @@ class MyWidget(QtWidgets.QWidget):
         self.pte = QtWidgets.QPlainTextEdit(self)
         self.pte.resize(350, 400)
         self.pte.move(150, 80)
-        self.pte.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOn)  # 始终显示滚动条
+        self.pte.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOn)  # 始终显示滚动条
 
         # 用于限制line_num_label位置尺寸的父控件
         line_num_widget = QtWidgets.QWidget(self)

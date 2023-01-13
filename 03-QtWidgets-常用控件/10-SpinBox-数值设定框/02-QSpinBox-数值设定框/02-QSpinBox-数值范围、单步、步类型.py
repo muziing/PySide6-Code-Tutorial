@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtWidgets
-
 """
 QSpinBox
 
@@ -33,11 +29,13 @@ QSpinBox
 
 QAbstractSpinBox.StepType枚举值有如下两种类型：
 https://doc.qt.io/qt-6/qabstractspinbox.html#StepType-enum
-QAbstractSpinBox.DefaultStepType
-QAbstractSpinBox.AdaptiveDecimalStepType
-
-
+QAbstractSpinBox.StepType.DefaultStepType
+QAbstractSpinBox.StepType.AdaptiveDecimalStepType
 """
+
+import sys
+
+from PySide6 import QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -65,7 +63,7 @@ class MyWidget(QtWidgets.QWidget):
 
         # 设置步类型
         # 注意启用自适应小数步后，之前设置的单步步长失效
-        spinbox.setStepType(QtWidgets.QAbstractSpinBox.AdaptiveDecimalStepType)
+        spinbox.setStepType(QtWidgets.QAbstractSpinBox.StepType.AdaptiveDecimalStepType)
 
 
 if __name__ == "__main__":

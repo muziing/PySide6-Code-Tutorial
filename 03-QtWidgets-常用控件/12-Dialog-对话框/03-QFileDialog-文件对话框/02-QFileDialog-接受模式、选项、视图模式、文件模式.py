@@ -59,20 +59,20 @@ class MyWidget(QtWidgets.QWidget):
         """设置文件对话框"""
 
         # 接受模式
-        self.dialog.setAcceptMode(QtWidgets.QFileDialog.AcceptOpen)  # 文件将用于打开
+        self.dialog.setAcceptMode(QtWidgets.QFileDialog.AcceptMode.AcceptOpen)  # 文件将用于打开
 
         # 设置选项
         self.dialog.setOptions(
-            QtWidgets.QFileDialog.DontUseCustomDirectoryIcons  # 只使用默认目录图标（提高性能）
-            | QtWidgets.QFileDialog.DontConfirmOverwrite  # 当用户选中现有文件时则无需确认
+            QtWidgets.QFileDialog.Option.DontUseCustomDirectoryIcons  # 只使用默认目录图标（提高性能）
+            | QtWidgets.QFileDialog.Option.DontConfirmOverwrite  # 当用户选中现有文件时则无需确认
         )
 
         # 设置视图模式
         # self.dialog.setViewMode(QtWidgets.QFileDialog.Detail)  # 显示详细信息（默认）
-        self.dialog.setViewMode(QtWidgets.QFileDialog.List)  # 显示列表信息
+        self.dialog.setViewMode(QtWidgets.QFileDialog.ViewMode.List)  # 显示列表信息
 
         # 文件模式
-        self.dialog.setFileMode(QtWidgets.QFileDialog.ExistingFile)  # 只能选择单个现有文件
+        self.dialog.setFileMode(QtWidgets.QFileDialog.FileMode.ExistingFile)  # 只能选择单个现有文件
 
     def setup_ui(self) -> None:
         """设置界面"""

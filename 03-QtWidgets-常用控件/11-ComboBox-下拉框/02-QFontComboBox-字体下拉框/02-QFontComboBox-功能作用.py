@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtGui, QtWidgets
-
 """
 QFontComboBox 功能作用
 
@@ -39,8 +35,11 @@ QFontComboBox.ScalableFonts         显示可缩放字体
 QFontComboBox.NonScalableFonts      显示不可缩放字体
 QFontComboBox.MonospacedFonts       显示等宽字体
 QFontComboBox.ProportionalFonts     显示比例字体
-
 """
+
+import sys
+
+from PySide6 import QtGui, QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -75,11 +74,15 @@ class MyWidget(QtWidgets.QWidget):
 
         # fcb.setWritingSystem(QtGui.QFontDatabase.SimplifiedChinese)  # 设置只显示简体中文书写系统的字体
         # 为指定文字系统（简体中文、希腊语、拉丁语、阿拉伯语……）添加示例文本
-        fcb.setSampleTextForSystem(QtGui.QFontDatabase.SimplifiedChinese, "我能吞下玻璃而不伤身体。")
-        fcb.setSampleTextForSystem(QtGui.QFontDatabase.TraditionalChinese, "我能吞下玻璃而不傷身體。")
+        fcb.setSampleTextForSystem(
+            QtGui.QFontDatabase.WritingSystem.SimplifiedChinese, "我能吞下玻璃而不伤身体。"
+        )
+        fcb.setSampleTextForSystem(
+            QtGui.QFontDatabase.WritingSystem.TraditionalChinese, "我能吞下玻璃而不傷身體。"
+        )
         # 获取示例文本
-        print(fcb.sampleTextForSystem(QtGui.QFontDatabase.SimplifiedChinese))
-        print(fcb.sampleTextForSystem(QtGui.QFontDatabase.Arabic))
+        print(fcb.sampleTextForSystem(QtGui.QFontDatabase.WritingSystem.SimplifiedChinese))
+        print(fcb.sampleTextForSystem(QtGui.QFontDatabase.WritingSystem.Arabic))
 
         # ======================== 设置字体筛选器 ========================
         # 筛选出等宽且不可缩放的字体

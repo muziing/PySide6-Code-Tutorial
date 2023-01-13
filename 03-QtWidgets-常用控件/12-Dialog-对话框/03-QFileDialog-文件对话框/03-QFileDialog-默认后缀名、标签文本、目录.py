@@ -38,19 +38,19 @@ class MyWidget(QtWidgets.QWidget):
     def setup_dialog(self) -> None:
         """设置文件对话框"""
 
-        self.dialog.setAcceptMode(QtWidgets.QFileDialog.AcceptSave)  # 文件对话框用于保存文件
+        self.dialog.setAcceptMode(QtWidgets.QFileDialog.AcceptMode.AcceptSave)  # 文件对话框用于保存文件
 
         # 默认后缀名
         self.dialog.setDefaultSuffix("txt")  # 设置默认后缀名
 
         # 标签文本
-        self.dialog.setLabelText(QtWidgets.QFileDialog.Accept, "保存")  # 将Accept按钮文本设置为保存
-        self.dialog.setLabelText(QtWidgets.QFileDialog.Reject, "取消")  # 将Reject标签文本设置为取消
+        self.dialog.setLabelText(QtWidgets.QFileDialog.DialogLabel.Accept, "保存")  # 将Accept按钮文本设置为保存
+        self.dialog.setLabelText(QtWidgets.QFileDialog.DialogLabel.Reject, "取消")  # 将Reject标签文本设置为取消
 
     def setup_ui(self) -> None:
         """设置界面"""
 
-        self.setWindowTitle("QFileDialog-过滤器")
+        self.setWindowTitle("QFileDialog-功能测试")
 
         # 创建其他控件
         info_le = QtWidgets.QLineEdit(self)

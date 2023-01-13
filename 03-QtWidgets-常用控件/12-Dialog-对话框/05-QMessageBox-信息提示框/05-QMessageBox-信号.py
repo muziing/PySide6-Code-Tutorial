@@ -24,10 +24,10 @@ class MyWidget(QtWidgets.QWidget):
 
         # 创建对话框
         message_box = QtWidgets.QMessageBox(
-            QtWidgets.QMessageBox.Warning,
+            QtWidgets.QMessageBox.Icon.Warning,
             "这是一个消息提示框",
             "您不能在关闭模态对话框前操作其他窗口！",
-            QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Cancel,
+            QtWidgets.QMessageBox.StandardButton.Ok | QtWidgets.QMessageBox.StandardButton.Cancel,
             self,
         )
 

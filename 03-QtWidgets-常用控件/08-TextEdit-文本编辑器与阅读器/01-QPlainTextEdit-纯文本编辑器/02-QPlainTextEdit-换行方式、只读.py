@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtGui, QtWidgets
-
 """
 QPlainTextEdit 换行方式、只读
 
@@ -40,11 +36,15 @@ https://doc.qt.io/qt-6/qplaintextedit.html#read-only-key-bindings
 
 .setReadOnly(ro: bool)    设置只读状态
 .isReadOnly() -> bool     返回是否开启了只读
-
 """
 
+import sys
+
+from PySide6 import QtWidgets
+from PySide6.QtGui import QTextOption
+
 long_text = """Gatsby believed in the green light, the orgastic future that year by year recedes before us. \
-It eluded us then, but that's no matter--tomorrow we will run faster, stretch out our arms farther. . . . \
+It eluded us then, but that's no matter--tomorrow we will run faster, stretch out our arms farther... \
 And one fine morning----\nSo we beat on, boats against the current, borne back ceaselessly into the past."""
 
 
@@ -66,21 +66,25 @@ class MyWidget(QtWidgets.QWidget):
 
     def test_01(self) -> None:
         """测试自动换行功能"""
+
         # 设置换行模式
-        self.pte.setLineWrapMode(QtWidgets.QPlainTextEdit.WidgetWidth)  # 自动换行（默认值）
-        # self.pte.setLineWrapMode(QtWidgets.QPlainTextEdit.NoWrap)  # 关闭自动换行
+        self.pte.setLineWrapMode(QtWidgets.QPlainTextEdit.LineWrapMode.WidgetWidth)  # 自动换行（默认值）
+        # self.pte.setLineWrapMode(QtWidgets.QPlainTextEdit.LineWrapMode.NoWrap)  # 关闭自动换行
         print(self.pte.lineWrapMode())  # 获取换行模式
 
         # 设置单词换行方式
-        # self.pte.setWordWrapMode(QtGui.QTextOption.NoWrap)  # 永不换行
-        # self.pte.setWordWrapMode(QtGui.QTextOption.WordWrap)  # 在单词间换行
-        # self.pte.setWordWrapMode(QtGui.QTextOption.ManualWrap)  # 同NoWrap
-        # self.pte.setWordWrapMode(QtGui.QTextOption.WrapAnywhere)  # 在任意位置换行，可能打断单词
-        self.pte.setWordWrapMode(QtGui.QTextOption.WrapAtWordBoundaryOrAnywhere)  # 尽可能单词间换行，否则任意换行
+        # self.pte.setWordWrapMode(QTextOption.WrapMode.NoWrap)  # 永不换行
+        # self.pte.setWordWrapMode(QTextOption.WrapMode.WordWrap)  # 在单词间换行
+        # self.pte.setWordWrapMode(QTextOption.WrapMode.ManualWrap)  # 同NoWrap
+        # self.pte.setWordWrapMode(QTextOption.WrapMode.WrapAnywhere)  # 在任意位置换行，可能打断单词
+        self.pte.setWordWrapMode(
+            QTextOption.WrapMode.WrapAtWordBoundaryOrAnywhere
+        )  # 尽可能单词间换行，否则任意换行
         print(self.pte.wordWrapMode())  # 获取单词换行方式
 
     def test_02(self) -> None:
         """测试只读模式功能"""
+
         self.pte.setReadOnly(True)  # 启用只读模式
         # self.pte.setReadOnly(False)  # 关闭只读模式
         print(self.pte.isReadOnly())  # 获取只读状态

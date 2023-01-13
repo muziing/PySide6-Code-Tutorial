@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtWidgets
-
 """
 QSlider 滑块控件
 水平或垂直的滑块
@@ -10,6 +6,10 @@ QSlider 滑块控件
 
 相比于其抽象父类QAbstractSlider,主要是添加了刻度线功能
 """
+
+import sys
+
+from PySide6 import QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -27,7 +27,7 @@ class MyWidget(QtWidgets.QWidget):
         slider.resize(40, 200)
 
         # 在两侧绘制刻度线
-        slider.setTickPosition(QtWidgets.QSlider.TicksBothSides)
+        slider.setTickPosition(QtWidgets.QSlider.TickPosition.TicksBothSides)
 
 
 if __name__ == "__main__":

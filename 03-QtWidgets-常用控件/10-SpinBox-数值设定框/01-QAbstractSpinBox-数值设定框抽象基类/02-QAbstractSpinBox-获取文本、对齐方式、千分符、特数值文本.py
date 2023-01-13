@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtCore, QtWidgets
-
 """
 QAbstractSpinBox 文本相关功能
 
@@ -27,8 +23,11 @@ QAbstractSpinBox 文本相关功能
 
 .setSpecialValueText(text: str)        设置特数值文本
 .specialValueText() -> str             获取当前特数值文本，若未设置则返回空字符串
-
 """
+
+import sys
+
+from PySide6 import QtCore, QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -51,7 +50,7 @@ class MyWidget(QtWidgets.QWidget):
         btn.clicked.connect(lambda: print(spin_box.text()))  # type: ignore
 
         # =================================== 文本对齐方式 ===================================
-        spin_box.setAlignment(QtCore.Qt.AlignHCenter)  # 更改为水平居中对齐，默认为左对齐
+        spin_box.setAlignment(QtCore.Qt.AlignmentFlag.AlignHCenter)  # 更改为水平居中对齐，默认为左对齐
 
         # ==================================== 千分符 ===================================
         spin_box.setGroupSeparatorShown(True)  # 显示千分符

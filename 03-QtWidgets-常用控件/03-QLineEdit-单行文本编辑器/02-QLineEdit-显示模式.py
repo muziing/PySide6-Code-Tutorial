@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtCore, QtWidgets
-
 """
 QLineEdit 显示模式
 默认显示模式为正常，即用户输入什么就显示什么
@@ -20,8 +16,11 @@ QLineEdit.PasswordEchoOnEdit  当字符正在被编辑时显示，否则行为�
 
 .text() -> str                返回LineEdit内的文本，与显示模式无关
 .displayText() -> str         返回LineEdit中显示的文本。例如Password模式下可能会获得"*******"
-
 """
+
+import sys
+
+from PySide6 import QtCore, QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -63,10 +62,10 @@ class MyWidget(QtWidgets.QWidget):
 
     def test_echo_mode(self) -> None:
         """测试显示模式功能"""
-        self.line_edit_1.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.line_edit_2.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.line_edit_3.setEchoMode(QtWidgets.QLineEdit.PasswordEchoOnEdit)
-        self.line_edit_4.setEchoMode(QtWidgets.QLineEdit.NoEcho)
+        self.line_edit_1.setEchoMode(QtWidgets.QLineEdit.EchoMode.Normal)
+        self.line_edit_2.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
+        self.line_edit_3.setEchoMode(QtWidgets.QLineEdit.EchoMode.PasswordEchoOnEdit)
+        self.line_edit_4.setEchoMode(QtWidgets.QLineEdit.EchoMode.NoEcho)
 
         @QtCore.Slot()
         def test_slot():

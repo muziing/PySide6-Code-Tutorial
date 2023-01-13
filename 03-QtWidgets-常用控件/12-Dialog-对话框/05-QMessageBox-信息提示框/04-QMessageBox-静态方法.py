@@ -34,7 +34,6 @@ QMessageBox.StandardButton
 
 question()、warning()、critical() 静态方法与 information() 非常相似，类比使用即可，不再赘述。
 
-
 """
 
 import sys
@@ -76,11 +75,11 @@ class MyWidget(QWidget):
         self.about_qt_btn.clicked.connect(lambda: QMessageBox.aboutQt(self))  # type: ignore
 
         user_result_dict = {
-            QMessageBox.Ok: "OK",
-            QMessageBox.Cancel: "取消",
-            QMessageBox.Discard: "不保存",
-            QMessageBox.Save: "保存",
-            QMessageBox.Apply: "应用",
+            QMessageBox.StandardButton.Ok: "OK",
+            QMessageBox.StandardButton.Cancel: "取消",
+            QMessageBox.StandardButton.Discard: "不保存",
+            QMessageBox.StandardButton.Save: "保存",
+            QMessageBox.StandardButton.Apply: "应用",
         }
 
         @QtCore.Slot()
@@ -90,8 +89,8 @@ class MyWidget(QWidget):
                 self,
                 "静态方法-信息",
                 "这里可以展示一些信息",
-                QMessageBox.Ok,
-                QMessageBox.Cancel,
+                QMessageBox.StandardButton.Ok,
+                QMessageBox.StandardButton.Cancel,
             )  # 调用静态函数展示信息，将返回值保存到result变量中
             self.label.setText(f"用户选择了：{user_result_dict[result]}")
             self.label.adjustSize()
@@ -99,7 +98,9 @@ class MyWidget(QWidget):
         @QtCore.Slot()
         def show_warn_dlg() -> None:
             """self.warning_btn对应的槽函数"""
-            result = QMessageBox.warning(self, "静态方法-警告", "警告：直接退出将不会保存修改", QMessageBox.Discard)
+            result = QMessageBox.warning(
+                self, "静态方法-警告", "警告：直接退出将不会保存修改", QMessageBox.StandardButton.Discard
+            )
             self.label.setText(f"用户选择了：{user_result_dict[result]}")
             self.label.adjustSize()
 

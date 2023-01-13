@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtWidgets
-
 """
 QComboBox 条目操作
 可以控制用户是否能够以编辑条目的方式添加新条目，以及添加新条目时的细节
@@ -51,8 +47,11 @@ QComboBox.AdjustToContents              总是根据内容调整尺寸
 QComboBox.AdjustToContentsOnFirstShow   仅在首次出现时调整尺寸，默认值
 QComboBox.AdjustToMinimumContentsLengthWithIcon
                                         将尺寸调整至最小内容长度加一个图标，出于性能原因，请在大型模型上使用此策略
-
 """
+
+import sys
+
+from PySide6 import QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -76,19 +75,19 @@ class MyWidget(QtWidgets.QWidget):
         cbb.setDuplicatesEnabled(True)
 
         # 设置插入策略
-        # cbb.setInsertPolicy(QtWidgets.QComboBox.NoInsert)
-        # cbb.setInsertPolicy(QtWidgets.QComboBox.InsertAtTop)
-        # cbb.setInsertPolicy(QtWidgets.QComboBox.InsertAtCurrent)
-        cbb.setInsertPolicy(QtWidgets.QComboBox.InsertAtBottom)
-        # cbb.setInsertPolicy(QtWidgets.QComboBox.InsertAfterCurrent)
-        # cbb.setInsertPolicy(QtWidgets.QComboBox.InsertBeforeCurrent)
-        # cbb.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
+        # cbb.setInsertPolicy(QtWidgets.QComboBoxInsertPolicy..NoInsert)
+        # cbb.setInsertPolicy(QtWidgets.QComboBox.InsertPolicy.InsertAtTop)
+        # cbb.setInsertPolicy(QtWidgets.QComboBox.InsertPolicy.InsertAtCurrent)
+        cbb.setInsertPolicy(QtWidgets.QComboBox.InsertPolicy.InsertAtBottom)
+        # cbb.setInsertPolicy(QtWidgets.QComboBox.InsertPolicy.InsertAfterCurrent)
+        # cbb.setInsertPolicy(QtWidgets.QComboBox.InsertPolicy.InsertBeforeCurrent)
+        # cbb.setInsertPolicy(QtWidgets.QComboBox.InsertPolicy.InsertAlphabetically)
 
         # 设置可编辑文本
         cbb.setEditText("000")  # 将当前文本设置为00,而不影响其他条目
 
         # 设置尺寸调整策略
-        cbb.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContents)  # 总是根据内容调整尺寸
+        cbb.setSizeAdjustPolicy(QtWidgets.QComboBox.SizeAdjustPolicy.AdjustToContents)  # 总是根据内容调整尺寸
 
         # 限制最小字符数
         cbb.setMinimumContentsLength(3)

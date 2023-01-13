@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtWidgets
-
 """
 QFrame 是具有边框的控件的基类
 官方文档：https://doc.qt.io/qtforpython/PySide6/QtWidgets/QFrame.html
@@ -12,14 +8,17 @@ QFrame 是具有边框的控件的基类
 
 构造函数中可以传入父控件与WindowFlags（见本项目05-03-01）
 .__init__(self, parent: Optional[QWidget] = None, f: Qt.WindowFlags = Default(Qt.WindowFlags))
-
 """
+
+import sys
+
+from PySide6 import QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.setWindowTitle("空白测试模板")
+        self.setWindowTitle("QFrame")
         self.resize(800, 600)
         self.setup_ui()
 
@@ -30,7 +29,7 @@ class MyWidget(QtWidgets.QWidget):
         frame.move(200, 200)
 
         # 设置风格与线宽
-        frame.setFrameStyle(QtWidgets.QFrame.StyledPanel | QtWidgets.QFrame.Sunken)
+        frame.setFrameStyle(QtWidgets.QFrame.Shape.StyledPanel | QtWidgets.QFrame.Shadow.Sunken)
         frame.setLineWidth(3)
 
 

@@ -1,10 +1,5 @@
-import sys
-
-from PySide6 import QtWidgets
-
 """
 QAbstractSpinBox 按钮标志、边框、只读
-
 
 =================================== 按钮标志 ===================================
 可以控制数值设定框右侧的按钮的图标，默认为上下箭头
@@ -15,9 +10,9 @@ QAbstractSpinBox 按钮标志、边框、只读
 
 QAbstractSpinBox.ButtonSymbols枚举值具体有如下数种：
 https://doc.qt.io/qt-6/qabstractspinbox.html#ButtonSymbols-enum
-QAbstractSpinBox.UpDownArrows    经典风格中的向上/向下小箭头
-QAbstractSpinBox.PlusMinus       加号+与减号-
-QAbstractSpinBox.NoButtons       不显示任何按钮
+QAbstractSpinBox.ButtonSymbols.UpDownArrows    经典风格中的向上/向下小箭头
+QAbstractSpinBox.ButtonSymbols.PlusMinus       加号+与减号-
+QAbstractSpinBox.ButtonSymbols.NoButtons       不显示任何按钮
 
 =================================== 边框 ===================================
 可以调整SpinBox外观是否具有边框，默认为具有边框
@@ -32,6 +27,10 @@ QAbstractSpinBox.NoButtons       不显示任何按钮
 .setReadOnly(r: bool)
 .isReadOnly() -> bool
 """
+
+import sys
+
+from PySide6 import QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -48,8 +47,8 @@ class MyWidget(QtWidgets.QWidget):
         spin_box.move(200, 200)
 
         # 设置按钮标志
-        spin_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
-        # spin_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        spin_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.ButtonSymbols.PlusMinus)
+        # spin_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.ButtonSymbols.NoButtons)
 
         # 设置边框
         spin_box.setFrame(False)  # 不显示外边框

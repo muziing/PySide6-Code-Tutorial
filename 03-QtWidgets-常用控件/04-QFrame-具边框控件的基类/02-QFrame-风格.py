@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtWidgets
-
 """
 QFrame 风格：形状、阴影、线宽
 所有组合的视觉效果：https://doc.qt.io/qt-6/images/frames.png
@@ -35,14 +31,17 @@ https://doc.qt.io/qt-6/qframe.html#Shadow-enum
 QFrame.Plain          边框与内容与周围处于同水平，没有任何3D效果
 QFrame.Raised         边框与内容浮起，使用当前的颜色组绘制亮处与阴影以实现3D效果
 QFrame.Sunken         边框与内容下沉，使用当前的颜色组绘制亮处与阴影以实现3D效果
-
 """
+
+import sys
+
+from PySide6 import QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.setWindowTitle("空白测试模板")
+        self.setWindowTitle("QFrame-风格")
         self.resize(800, 600)
         self.setup_ui()
 
@@ -52,9 +51,9 @@ class MyWidget(QtWidgets.QWidget):
         frame.resize(200, 200)
         frame.move(200, 200)
 
-        # frame.setFrameStyle(QtWidgets.QFrame.Box | QtWidgets.QFrame.Raised)
-        frame.setFrameShape(QtWidgets.QFrame.Panel)
-        frame.setFrameShadow(QtWidgets.QFrame.Sunken)
+        # frame.setFrameStyle(QtWidgets.QFrame.Shape.Box | QtWidgets.QFrame.Shadow.Raised)
+        frame.setFrameShape(QtWidgets.QFrame.Shape.Panel)
+        frame.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
         frame.setLineWidth(3)
 
 
