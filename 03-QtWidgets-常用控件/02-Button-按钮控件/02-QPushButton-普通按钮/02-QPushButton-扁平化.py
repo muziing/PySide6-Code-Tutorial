@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtCore, QtGui, QtWidgets
-
 """
 QPushButton 扁平化
 设置扁平化后，除非按钮被按下，大部分样式不会绘制按钮背景，实现视觉上的扁平化
@@ -9,6 +5,10 @@ QPushButton 扁平化
 .setFlat(bool)     是否设置为扁平化，默认为否
 .isFlat() -> bool  是否为扁平化
 """
+
+import sys
+
+from PySide6 import QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):

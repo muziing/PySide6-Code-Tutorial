@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtGui, QtWidgets
-
 """
 QMessageBox 文本与图标
 
@@ -37,8 +33,11 @@ QMessageBox.Icon枚举值详见本目录下对应附录小节
 如要设置自定义图标，则应使用setIconPixmap方法：
 .setIconPixmap(icon: QPixmap)       设置自定义图标，需要为位图形式
 .iconPixmap() -> QPixmap            获取设置的图标
-
 """
+
+import sys
+
+from PySide6 import QtGui, QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -60,7 +59,7 @@ class MyWidget(QtWidgets.QWidget):
         message_box.setInformativeText("这是一段信息文本")
 
         # 设置图标
-        # message_box.setIcon(QtWidgets.QMessageBox.Information)  # 设置标准图标
+        # message_box.setIcon(QtWidgets.QMessageBox.Icon.Information)  # 设置标准图标
         my_icon = QtGui.QPixmap("../../../Resources/Icons/Qt_for_Python_128px.png")
         message_box.setIconPixmap(my_icon)  # 设置自定义图标
 

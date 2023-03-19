@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtCore, QtWidgets
-
 """
 QLineEdit 编辑操作
 
@@ -42,8 +38,11 @@ QLineEdit 提供了一批用于编辑操作的槽函数
 当用户对单行编辑器的内容有修改后，Modified属性会从默认的False变成True
 .setModified(yes: bool)                 手动设置Modified状态
 .isModified() -> bool                   获取用户是否对编辑器有修改
-
 """
+
+import sys
+
+from PySide6 import QtCore, QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -66,7 +65,7 @@ class MyWidget(QtWidgets.QWidget):
         self.clear_button = QtWidgets.QPushButton("清空")
         self.select_all_button = QtWidgets.QPushButton("全选")
         self.copy_button = QtWidgets.QPushButton("复制")
-        self.cut_buton = QtWidgets.QPushButton("剪切")
+        self.cut_button = QtWidgets.QPushButton("剪切")
         self.paste_button = QtWidgets.QPushButton("粘贴")
         self.undo_button = QtWidgets.QPushButton("撤销")
         self.redo_button = QtWidgets.QPushButton("重做")
@@ -78,7 +77,7 @@ class MyWidget(QtWidgets.QWidget):
         layout = QtWidgets.QHBoxLayout()
         layout.addWidget(self.clear_button)
         layout.addWidget(self.select_all_button)
-        layout.addWidget(self.cut_buton)
+        layout.addWidget(self.cut_button)
         layout.addWidget(self.copy_button)
         layout.addWidget(self.paste_button)
         layout.addWidget(self.undo_button)
@@ -98,7 +97,7 @@ class MyWidget(QtWidgets.QWidget):
 
         self.clear_button.clicked.connect(self.line_edit_1.clear)  # type: ignore
         self.select_all_button.clicked.connect(self.line_edit_1.selectAll)  # type: ignore
-        self.cut_buton.clicked.connect(self.line_edit_1.cut)  # type: ignore
+        self.cut_button.clicked.connect(self.line_edit_1.cut)  # type: ignore
         self.copy_button.clicked.connect(self.line_edit_1.copy)  # type: ignore
         self.paste_button.clicked.connect(self.line_edit_1.paste)  # type: ignore
         self.undo_button.clicked.connect(self.line_edit_1.undo)  # type: ignore

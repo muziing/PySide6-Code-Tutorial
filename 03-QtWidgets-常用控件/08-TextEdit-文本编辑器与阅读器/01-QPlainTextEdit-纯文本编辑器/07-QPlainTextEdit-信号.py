@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtCore, QtGui, QtWidgets
-
 """
 QPlainTextEdit 信号
 纯文本编辑器提供了许多可用信号
@@ -15,8 +11,11 @@ QPlainTextEdit 信号
 .redoAvailable(available: bool)           当重做功能可用状态发生变化时发射此信号，可用状态作为参数传出
 .updateRequest(rect: QRect, dy: int)      当文本文档需要更新指定的矩形时发射此信号。详情见下一节的案例
 .modificationChanged(changed: bool)       当文档的内容以影响修改状态的方式发生变化时发射此信号，文档是否已被修改作为参数传出
-
 """
+
+import sys
+
+from PySide6 import QtCore, QtGui, QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -70,7 +69,6 @@ class MyWidget(QtWidgets.QWidget):
         self.setLayout(main_layout)
 
     def signal_test(self) -> None:
-
         # 测试信号时为避免干扰，每次只测试一个，注释掉其他
         self.pte.textChanged.connect(lambda: self.info_label.setText("文本改变了！"))  # type: ignore
         # self.pte.selectionChanged.connect(lambda: self.info_label.setText("选中内容改变了！"))  # type: ignore

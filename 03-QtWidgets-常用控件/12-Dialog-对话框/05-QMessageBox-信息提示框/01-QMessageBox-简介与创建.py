@@ -35,7 +35,7 @@ class MyWidget(QtWidgets.QWidget):
 
         # 第一种构造函数
         # message_box = QtWidgets.QMessageBox(self)
-        # message_box.setIcon(QtWidgets.QMessageBox.Warning)
+        # message_box.setIcon(QtWidgets.QMessageBox.Icon.Warning)
         # message_box.setWindowTitle("这是一个消息提示框")
         # message_box.setText("您不能在关闭模态对话框前操作其他窗口！")
         # message_box.setStandardButtons(QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Cancel)

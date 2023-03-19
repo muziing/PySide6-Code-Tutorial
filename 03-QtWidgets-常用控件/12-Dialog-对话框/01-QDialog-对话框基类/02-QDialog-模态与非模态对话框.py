@@ -1,7 +1,3 @@
-import sys
-
-from PySide6 import QtWidgets
-
 """
 对话框-模态与非模态
 
@@ -24,8 +20,11 @@ https://doc.qt.io/qt-6/qt.html#WindowModality-enum
 Qt.NonModal          窗口为非模态，不阻塞其他窗口的输入
 Qt.WindowModal       窗口对单个窗口结构层次为模态，阻塞对其父窗口（及其的兄弟窗口）、祖父窗口（及其兄弟窗口）的输入
 Qt.ApplicationModal  窗口对应用程序为模态，阻塞对所有窗口的输入
-
 """
+
+import sys
+
+from PySide6 import QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -45,7 +44,7 @@ class MyWidget(QtWidgets.QWidget):
         dialog_window = QtWidgets.QMessageBox(self)  # 使用QDialog的子类来测试
         dialog_window.setWindowTitle("模态/非模态对话框")
         dialog_window.setText("模态窗口将阻塞用户对其他窗口的输入")
-        dialog_window.setIcon(QtWidgets.QMessageBox.Information)
+        dialog_window.setIcon(QtWidgets.QMessageBox.Icon.Information)
 
         # ================测试模态窗口=================================
         test_button_1 = QtWidgets.QPushButton("打开模态窗口")
