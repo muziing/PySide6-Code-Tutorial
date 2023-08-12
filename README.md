@@ -21,7 +21,7 @@
 - 在自己的机器上实际运行一下，仔细观察一下每个属性值的改变会怎样影响控件的外观行为，可能比静态的文档教程更有效
 - 前身为 GitHub 热度最高的中文 PyQt5 教程 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，目前已有 ![PyQt-Practice Stars](https://img.shields.io/github/stars/muziing/PyQt_practice.svg) 个 Stars
 - 相比 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，改进了项目目录结构，增加了部分内容，更加清晰丰富
-- 使用最新的 Python 与 PySide 版本（目前为`3.10`与`6.4`）
+- 使用最新的 Python 与 PySide 版本（目前为`3.11`与`6.5`）
 
 希望本项目对你我的 Python-GUI 学习之旅有所帮助。
 
