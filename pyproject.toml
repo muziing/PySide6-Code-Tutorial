@@ -17,13 +17,13 @@ priority = "default"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
-pyside6 = "^6.5.0"
+pyside6 = "^6.6.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "^23.7.0"
+black = "^23.11.0"
 isort = "^5.12.0"
-mypy = "^1.5.0"
-pre-commit = "^3.3.3"
+mypy = "^1.7.0"
+pre-commit = "^3.5.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

@@ -7,10 +7,10 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/muziing/PySide6-Code-Tutorial)
 ![License](https://img.shields.io/github/license/muziing/PySide6-Code-Tutorial)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/muziing/PySide6-Code-Tutorial)
-[![PySide Version](https://img.shields.io/badge/PySide-6.5-blue)](https://doc.qt.io/qtforpython/index.html)
+[![PySide Version](https://img.shields.io/badge/PySide-6.6-blue)](https://doc.qt.io/qtforpython/index.html)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
-[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+[![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
 
 ## 简介
 
@@ -21,7 +21,7 @@
 - 在自己的机器上实际运行一下，仔细观察一下每个属性值的改变会怎样影响控件的外观行为，可能比静态的文档教程更有效
 - 前身为 GitHub 热度最高的中文 PyQt5 教程 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，目前已有 ![PyQt-Practice Stars](https://img.shields.io/github/stars/muziing/PyQt_practice.svg) 个 Stars
 - 相比 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，改进了项目目录结构，增加了部分内容，更加清晰丰富
-- 使用最新的 Python 与 PySide 版本（目前为`3.11`与`6.5`）
+- 使用最新的 Python 与 PySide 版本（目前为`3.11`与`6.6`）
 
 希望本项目对你我的 Python-GUI 学习之旅有所帮助。
 
@@ -35,9 +35,9 @@
 
 1. Star 本仓库
 2. 通过以下方法之一获取源码
-    - 克隆仓库（推荐）：`git clone https://github.com/muziing/PySide6-Code-Tutorial.git`
-    - 下载 zip：<https://github.com/muziing/PySide6-Code-Tutorial/archive/refs/heads/main.zip>
-    - 查看 [Releases](https://github.com/muziing/PySide6-Code-Tutorial/releases) 界面，下载最新发布版（文件更小）
+   - 克隆仓库（推荐）：`git clone https://github.com/muziing/PySide6-Code-Tutorial.git`
+   - 下载 zip：<https://github.com/muziing/PySide6-Code-Tutorial/archive/refs/heads/main.zip>
+   - 查看 [Releases](https://github.com/muziing/PySide6-Code-Tutorial/releases) 界面，下载最新发布版（文件更小）
 3. 进入项目目录
 
 ### 二、配置虚拟环境与安装依赖
@@ -56,11 +56,11 @@
 
 1. 确保 Python 版本与 [pyproject.toml](./pyproject.toml) 中要求的一致
 2. 创建虚拟环境
-    - Windows: `python -m venv --upgrade-deps venv`
-    - Linux/macOS: `python3 -m venv --upgrade-deps venv`
+   - Windows: `python -m venv --upgrade-deps venv`
+   - Linux/macOS: `python3 -m venv --upgrade-deps venv`
 3. 激活虚拟环境
-    - Windows: `venv\Scripts\activate`
-    - Linux/macOS: `. venv/bin/activate`
+   - Windows: `venv\Scripts\activate`
+   - Linux/macOS: `. venv/bin/activate`
 4. 安装依赖：`pip install -r requirements.txt`
 
 **方式 C** ：其他包管理工具
@@ -142,4 +142,4 @@ PySide6 Code Tutorial 是一个开源项目，非常期待以及感谢你的参�
 
 本项目的[主要作者/维护者](https://muzing.top/about/)是一名还没有收入的在校学生，如果本项目对你有帮助，希望可以请他喝一杯冰可乐 :beer:。
 
-![微信收款码](./Resources/Images/muzing-WeChat-Collection-QRCode.png)
+![微信收款码](./Resources/Images/muzing-WeChat-Collection.png)
