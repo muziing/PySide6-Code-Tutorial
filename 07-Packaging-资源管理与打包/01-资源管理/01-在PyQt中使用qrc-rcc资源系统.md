@@ -118,48 +118,48 @@ Qt Resource Compiler version 6.4.1
 
 Options:
   -h, --help                            显示关于命令行选项的帮助
-  
+
   --help-all                            显示包括Qt独有选项在内的所有帮助
-  
+
   -v, --version                         显示版本信息
-  
+
   -o, --output <file>                   将输出写入到 <file> 中，而不是 stdout 中
 
   -t, --temp <file>                     为大资源文件使用临时文件 <file>
-  
+
   --name <name>                         用 <name> 创建一个外部初始化函数
-  
+
   --root <path>                         用根目录 <path> 作为资源访问路径的前缀
-  
+
   --compress-algo <algo>                使用 <algo> 算法压缩输入文件([zlib], none)
-  
+
   --compress <level>                    按 <level> 级别压缩输入文件
-  
+
   --no-compress                         禁用所有压缩，等同于 --compress-algo=none
-  
+
   --no-zstd                             禁止使用 zstd 压缩
-  
+
   --threshold <level>                   衡量是否值得进行压缩的阈值
-  
+
   --binary                              输出一个作为动态资源使用的二进制文件
-  
+
   -g, --generator <cpp|python|python2>  选择生成器
-  
+
   --pass <number>                       Pass number for big resources
-  
+
   --namespace                           关闭命名空间宏
-  
+
   --verbose                             启用 verbose 模式
-  
+
   --list                                只列出 .qrc 文件条目，不生成代码
-  
+
   --list-mapping                        只输出 .qrc 中定义的资源路径与文件系统路径的
                                         映射，不生成代码
-                                        
+
   -d, --depfile <file>                  向 <file> 中写入一个包含 .qrc 依赖项的 depfile
 
   --project                             输出一个包含当前目录下所有文件的资源文件
-  
+
   --format-version <number>             写入 RCC 格式的版本
 
 Arguments:
@@ -300,6 +300,15 @@ def get_about_text():
     about_text = str(about_file.readAll(), encoding="utf-8")  # 读取文件，并将 QBtyeArray 转为 str
     about_file.close()
     return about_text
+```
+
+或者使用本项目提供的 [`OpenQFile`](./open_qfile.py)：
+
+```python
+from open_qfile import OpenQFile
+
+with OpenQFile(":/texts/About_Text", "rt", encoding="utf-8") as f:
+    about_text = f.read()
 ```
 
 对于图片，可以在创建 [QIcon](https://doc.qt.io/qt-6/qicon.html)、[QImage](https://doc.qt.io/qt-6/qimage.html)、[QPixmap](https://doc.qt.io/qt-6/qpixmap.html) 对象时将直接资源路径作为参数传入：
