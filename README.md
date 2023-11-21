@@ -1,4 +1,4 @@
-<img src="./Resources/Icons/Qt_for_Python_128px.png" alt="logo" height="120" align="right" />
+<img src="./Resources/Icons/Qt_for_Python_128px.png" alt="logo" height="128" align="right" />
 
 # PySide6 代码式教程
 
@@ -47,7 +47,7 @@
 1. 确保 Python 版本与 [pyproject.toml](./pyproject.toml) 中要求的一致
 2. 按[官方文档](https://python-poetry.org/docs/#installation)提示安装 Poetry
 3. 创建虚拟环境：`poetry env use /full/path/to/python`（注意替换路径）
-4. 安装依赖：`poetry install --no-dev`
+4. 安装依赖：`poetry install --no-root --only main`
 5. 使用该虚拟环境： `poetry shell`（或在 PyCharm 等 IDE 中配置）
 
 > 更多 Poetry 使用方法信息，请参阅其[官方文档](https://python-poetry.org/docs/)。
