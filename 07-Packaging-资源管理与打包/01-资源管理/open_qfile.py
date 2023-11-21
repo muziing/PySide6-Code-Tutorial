@@ -1,31 +1,44 @@
 import locale
 import os
+import pathlib
 import warnings
 from typing import Optional, Union
 
 from PySide6.QtCore import QFile, QIODevice
 
 
-class OpenQFile:
+class QtFileOpen:
     """
-    用于以QFile形式打开文件的上下文管理器 \n
-    使支持 Python 的 with 风格 \n
+    通过 QFile 读写文件的上下文管理器 \n
+    使与 Python 的 with 语句风格统一 \n
+
+    使用举例：
+
+    with QtFileOpen("./test.txt", "rt", encoding="utf-8") as f:
+        print(f.read())
     """
 
-    def __init__(self, file: Union[str, bytes, os.PathLike[str]],
-                 mode="r",
-                 encoding: Optional[str] = None):
+    def __init__(
+        self,
+        file: Union[str, bytes, os.PathLike[str]],
+        mode="r",
+        encoding: Optional[str] = None,
+    ):
         """
         :param file: 文件路径
         :param mode: 打开模式（暂时只支持文本读取）
         :param encoding: 文本文件编码
         """
 
+        # 预处理文件路径，防止在 Windows 平台下 QFile 只能处理 '/' 导致的问题
+        file_path = self.deal_path(file)
+        print(file_path)
+
         # 分析模式是否合法、返回正确的 FileIo 类实例
         # https://docs.python.org/zh-cn/3/library/functions.html#open
         if "b" not in mode:
             # 文本模式
-            self.io_obj = PyQTextFileIo(file, mode, encoding)
+            self.io_obj = PyQTextFileIo(file_path, mode, encoding)
         else:
             # 二进制模式（暂不支持）
             # self.io_obj = PyQByteFileIo(file, mode)
@@ -37,12 +50,43 @@ class OpenQFile:
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.io_obj.close()
 
+    @classmethod
+    def deal_path(cls, path) -> str:
+        """
+        预处理文件路径，确保使用 / 风格
+        :param path: 文件路径
+        :return: 使用正斜杠（/）的路径字符串
+        """
+
+        # 若路径以字节串传入，则先处理成字符串
+        if isinstance(path, bytes):
+            path = str(path, encoding=locale.getencoding())
+
+        return str(pathlib.PurePath(path).as_posix())
+
 
 class PyQTextFileIo:
     """
     将 QFile 中处理文本文件读写的部分封装成 Python的 io 风格
     目前只支持读取，不支持写入
     """
+
+    def __init__(
+        self,
+        file: Union[str, bytes, os.PathLike[str]],
+        mode,
+        encoding: Optional[str] = None,
+    ):
+        self._file = QFile(file)
+
+        if encoding is not None:
+            self.encoding = encoding
+        else:
+            # 用户未指定编码，则使用当前平台默认编码
+            self.encoding = locale.getencoding()
+
+        self.mode = self._parse_mode(mode)
+        self._file.open(self.mode)
 
     @classmethod
     def _parse_mode(cls, py_mode: str) -> QIODevice:
@@ -68,26 +112,12 @@ class PyQTextFileIo:
 
         return qt_mode
 
-    def __init__(self, file: Union[str, bytes, os.PathLike[str]],
-                 mode,
-                 encoding: Optional[str] = None):
-
-        self._file = QFile(file)  # TODO 处理 QFile 只接受`/`风格路径可能导致 Windows 平台异常的问题
-
-        if encoding is not None:
-            self.encoding = encoding
-        else:
-            # 用户未指定编码，则使用当前平台默认编码
-            self.encoding = locale.getencoding()
-
-        self.mode = self._parse_mode(mode)
-        self._file.open(self.mode)
-
     def readable(self) -> bool:
         """
         当前文件是否可读 \n
         :return: isReadable
         """
+
         return self._file.isReadable()
 
     def read(self, size: int = -1) -> str:
@@ -112,7 +142,7 @@ class PyQTextFileIo:
 
         return text
 
-    def readline(self, size: int = - 1, /) -> str:
+    def readline(self, size: int = -1, /) -> str:
         """
         模仿 io.TextIOBase.readline 的行为，读取文件中的一行。 \n
         https://docs.python.org/3/library/io.html#io.TextIOBase.readline
@@ -124,7 +154,9 @@ class PyQTextFileIo:
             raise OSError(f"File '{self._file.fileName()}' is not Readable.")
 
         if self._file.atEnd():
-            warnings.warn(f"Trying to read a line at the end of the file '{self._file.fileName()}'.")
+            warnings.warn(
+                f"Trying to read a line at the end of the file '{self._file.fileName()}'."
+            )
             return ""
         else:
             if size == 0:
@@ -161,23 +193,9 @@ class PyQTextFileIo:
 
         return all_lines
 
-    def close(self):
+    def close(self) -> None:
+        """
+        关闭打开的文件对象
+        """
+
         self._file.close()
-
-
-if __name__ == "__main__":
-    with OpenQFile(b"./test.txt", "rt", encoding="gbk") as f:
-        print(f.read(11))
-        # print(f.readline())
-        # lines = f.readlines()
-        # print(lines)
-
-    print("-----------")
-
-    with open("./test.txt", "rt", encoding="gbk") as f:
-        print(f.read(11))
-        # print(f.readline())
-        # lines = f.readlines()
-        # print(lines)
-
-    # f.read()  # 离开 with 语句块后文件已经被关闭，无法再读
