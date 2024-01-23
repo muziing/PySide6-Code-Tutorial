@@ -30,11 +30,11 @@ class MyWidget(QtWidgets.QWidget):
 
         @QtCore.Slot(int)
         def test_slot(state: int) -> None:
-            if state == Qt.Checked:
+            if state == Qt.Checked.value:
                 print("复选框被选中了！")
-            elif state == Qt.Unchecked:
+            elif state == Qt.Unchecked.value:
                 print("复选框被取消选中了！")
-            elif state == Qt.PartiallyChecked:
+            elif state == Qt.PartiallyChecked.value:
                 print("复选框被部分选中！")
 
         self.cb.stateChanged.connect(test_slot)  # type: ignore
