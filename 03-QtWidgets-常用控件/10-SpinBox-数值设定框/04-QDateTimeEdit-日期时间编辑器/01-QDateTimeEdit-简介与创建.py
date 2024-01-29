@@ -36,7 +36,9 @@ class MyWidget(QtWidgets.QWidget):
         # dte = QtWidgets.QDateTimeEdit(self)  # 创建空的日期时间编辑器
         # dte = QtWidgets.QDateTimeEdit(my_time, self)  # 使用QTime初始化
         # dte = QtWidgets.QDateTimeEdit(my_date, self)  # 使用QDate初始化
-        dte = QtWidgets.QDateTimeEdit(QtCore.QDateTime.currentDateTime(), self)  # 使用QDateTime初始化
+        dte = QtWidgets.QDateTimeEdit(
+            QtCore.QDateTime.currentDateTime(), self
+        )  # 使用QDateTime初始化
 
         dte.move(200, 200)
 

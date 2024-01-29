@@ -56,7 +56,9 @@ class MyWidget(QtWidgets.QWidget):
         fcb = QtWidgets.QFontComboBox()
 
         # 创建示例文本并连接信号，当用户选择字体改变时，对应改变示例文本的字体
-        text_label = QtWidgets.QLabel("我能吞下玻璃而不伤身体。\nThe quick brown fox jumps over the lazy dog.")
+        text_label = QtWidgets.QLabel(
+            "我能吞下玻璃而不伤身体。\nThe quick brown fox jumps over the lazy dog."
+        )
         fcb.currentFontChanged.connect(text_label.setFont)  # type: ignore
 
         # 使用布局管理器布局界面
@@ -66,7 +68,9 @@ class MyWidget(QtWidgets.QWidget):
         self.setLayout(layout)
 
         # ======================== 设置显示字体 ========================
-        fcb.setDisplayFont("Arial", QtGui.QFont("Arial Black", italic=True))  # 注意在本地测试时使用本机已安装的字体
+        fcb.setDisplayFont(
+            "Arial", QtGui.QFont("Arial Black", italic=True)
+        )  # 注意在本地测试时使用本机已安装的字体
         # 此时在combobox中的"Arial"条目是用黑体斜体显示的，而非原来的Arial字体
 
         # ======================== 设置示例文本、书写系统 ========================

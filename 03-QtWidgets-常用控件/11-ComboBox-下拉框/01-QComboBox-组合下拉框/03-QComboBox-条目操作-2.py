@@ -87,7 +87,9 @@ class MyWidget(QtWidgets.QWidget):
         cbb.setEditText("000")  # 将当前文本设置为00,而不影响其他条目
 
         # 设置尺寸调整策略
-        cbb.setSizeAdjustPolicy(QtWidgets.QComboBox.SizeAdjustPolicy.AdjustToContents)  # 总是根据内容调整尺寸
+        cbb.setSizeAdjustPolicy(
+            QtWidgets.QComboBox.SizeAdjustPolicy.AdjustToContents
+        )  # 总是根据内容调整尺寸
 
         # 限制最小字符数
         cbb.setMinimumContentsLength(3)
