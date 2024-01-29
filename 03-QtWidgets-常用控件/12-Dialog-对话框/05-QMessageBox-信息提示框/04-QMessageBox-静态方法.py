@@ -70,7 +70,9 @@ class MyWidget(QWidget):
         """测试QMessageBox的静态方法"""
 
         self.about_btn.clicked.connect(
-            lambda: QMessageBox.about(self, "关于此程序", "本程序为PySide6 Code Tutorial中的一个案例")
+            lambda: QMessageBox.about(
+                self, "关于此程序", "本程序为PySide6 Code Tutorial中的一个案例"
+            )
         )  # type: ignore
         self.about_qt_btn.clicked.connect(lambda: QMessageBox.aboutQt(self))  # type: ignore
 
@@ -99,7 +101,10 @@ class MyWidget(QWidget):
         def show_warn_dlg() -> None:
             """self.warning_btn对应的槽函数"""
             result = QMessageBox.warning(
-                self, "静态方法-警告", "警告：直接退出将不会保存修改", QMessageBox.StandardButton.Discard
+                self,
+                "静态方法-警告",
+                "警告：直接退出将不会保存修改",
+                QMessageBox.StandardButton.Discard,
             )
             self.label.setText(f"用户选择了：{user_result_dict[result]}")
             self.label.adjustSize()

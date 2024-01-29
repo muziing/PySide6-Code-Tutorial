@@ -23,7 +23,9 @@ class MyWidget(QtWidgets.QWidget):
         self.pte = QtWidgets.QPlainTextEdit(self)
         self.pte.resize(350, 400)
         self.pte.move(150, 80)
-        self.pte.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOn)  # 始终显示滚动条
+        self.pte.setVerticalScrollBarPolicy(
+            QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOn
+        )  # 始终显示滚动条
 
         # 用于限制line_num_label位置尺寸的父控件
         line_num_widget = QtWidgets.QWidget(self)

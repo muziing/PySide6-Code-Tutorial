@@ -68,7 +68,9 @@ class MyWidget(QtWidgets.QWidget):
         """测试自动换行功能"""
 
         # 设置换行模式
-        self.pte.setLineWrapMode(QtWidgets.QPlainTextEdit.LineWrapMode.WidgetWidth)  # 自动换行（默认值）
+        self.pte.setLineWrapMode(
+            QtWidgets.QPlainTextEdit.LineWrapMode.WidgetWidth
+        )  # 自动换行（默认值）
         # self.pte.setLineWrapMode(QtWidgets.QPlainTextEdit.LineWrapMode.NoWrap)  # 关闭自动换行
         print(self.pte.lineWrapMode())  # 获取换行模式
 

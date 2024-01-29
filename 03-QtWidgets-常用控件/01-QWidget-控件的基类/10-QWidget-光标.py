@@ -57,7 +57,9 @@ class MyWidget(QtWidgets.QWidget):
 
         # 设置为自定义图案光标
         pixmap = QtGui.QPixmap("../../Resources/Icons/snowflake_128px.ico").scaled(52, 52)
-        my_cursor = QtGui.QCursor(pixmap, 26, 26)  # 以图片像素点位置26,26为热点（光标实际所在位置坐标）
+        my_cursor = QtGui.QCursor(
+            pixmap, 26, 26
+        )  # 以图片像素点位置26,26为热点（光标实际所在位置坐标）
         self.setCursor(my_cursor)
 
         # 设置label中的光标为Qt内置的其他光标
