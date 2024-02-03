@@ -1,6 +1,4 @@
 --index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
-pyside6-addons==6.4.2 ; python_version >= "3.9" and python_version < "3.12"
-pyside6-essentials==6.4.2 ; python_version >= "3.9" and python_version < "3.12"
-pyside6==6.4.2 ; python_version >= "3.9" and python_version < "3.12"
-shiboken6==6.4.2 ; python_version >= "3.9" and python_version < "3.12"
+pyside6-essentials >= 6.2.0 ; python_version >= "3.9" and python_version < "3.13"
+shiboken6 >= 6.2.0 ; python_version >= "3.9" and python_version < "3.13"

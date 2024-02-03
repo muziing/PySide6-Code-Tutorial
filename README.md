@@ -97,7 +97,6 @@
 | 目录/文件                                          | 描述                |
 |------------------------------------------------|-------------------|
 | [requirements.txt](./requirements.txt)         | 依赖项，运行本项目必备       |
-| [requirements_dev.txt](./requirements_dev.txt) | 开发依赖项，为本项目提交贡献时需要 |
 | [pyproject.toml](./pyproject.toml)             | 项目配置文件            |
 | [poetry.lock](./poetry.lock)                   | Poetry 依赖项版本约束文件  |
 | [.gitignore](./.gitignore)                     | git 忽略提交规则        |
