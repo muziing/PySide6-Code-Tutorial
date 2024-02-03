@@ -42,17 +42,7 @@
 
 ### 二、配置虚拟环境与安装依赖
 
-**方式 A** ：[Poetry](https://python-poetry.org/)（推荐）
-
-1. 确保 Python 版本与 [pyproject.toml](./pyproject.toml) 中要求的一致
-2. 按[官方文档](https://python-poetry.org/docs/#installation)提示安装 Poetry
-3. 创建虚拟环境：`poetry env use /full/path/to/python`（注意替换路径）
-4. 安装依赖：`poetry install --no-root --only main`
-5. 使用该虚拟环境： `poetry shell`（或在 PyCharm 等 IDE 中配置）
-
-> 更多 Poetry 使用方法信息，请参阅其[官方文档](https://python-poetry.org/docs/)。
-
-**方式 B** ：[venv](https://docs.python.org/zh-cn/3/library/venv.html)（简单易用）
+**方式 A** ：[venv](https://docs.python.org/zh-cn/3/library/venv.html)（简单易用，推荐）
 
 1. 确保 Python 版本与 [pyproject.toml](./pyproject.toml) 中要求的一致
 2. 创建虚拟环境
@@ -62,6 +52,16 @@
    - Windows: `venv\Scripts\activate`
    - Linux/macOS: `. venv/bin/activate`
 4. 安装依赖：`pip install -r requirements.txt`
+
+**方式 B** ：[Poetry](https://python-poetry.org/)
+
+1. 确保 Python 版本与 [pyproject.toml](./pyproject.toml) 中要求的一致
+2. 按[官方文档](https://python-poetry.org/docs/#installation)提示安装 Poetry
+3. 创建虚拟环境：`poetry env use /full/path/to/python`（注意替换路径）
+4. 安装依赖：`poetry install --no-root --only main`
+5. 使用该虚拟环境： `poetry shell`（或在 PyCharm 等 IDE 中配置）
+
+> 更多 Poetry 使用方法信息，请参阅其[官方文档](https://python-poetry.org/docs/)。
 
 **方式 C** ：其他包管理工具
 
@@ -86,7 +86,7 @@
 | [01. HelloWorld - PySide 基本结构](./01-HelloWorld-基本结构)            | 新手上路，PySide6 程序的基本结构                |
 | [02. QtCore - 非GUI的核心功能](./02-QtCore-非GUI的核心功能)                 | 元对象系统、「信号与槽」通信机制等                   |
 | [03. QtWidgets - 常用控件](./03-QtWidgets-常用控件)                     | 按钮、输入框、文本编辑器、下拉菜单、滚动条等等常用控件的功能、用法   |
-| [04. QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)       | 位图、字体、颜色、键盘快捷键等、事件                  |
+| [04. QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)       | 位图、字体、颜色、键盘快捷键等、事件（暂未完成）            |
 | [05. QtWidgets - 进阶话题](./05-QtWidgets-进阶话题)                     | 布局管理器、QSS样式、主窗口控件等                  |
 | [06. Model/View - 模型与视图、数据库](./06-ModelView-模型与视图、数据库)          | 模型与视图、与数据库交互                        |
 | [07. Packaging - 静态资源编译、打包](./07-Packaging-资源管理与打包)             | 将应用程序打包为 `exe`、将静态资源编译至二进制 `qrc` 文件 |
@@ -139,6 +139,6 @@ PySide6 Code Tutorial 是一个开源项目，非常期待以及感谢你的参�
 
 ## 打赏
 
-本项目的[主要作者/维护者](https://muzing.top/about/)是一名还没有收入的在校学生，如果本项目对你有帮助，希望可以请他喝一杯冰可乐 :beer:。
+如果本项目对你有帮助，可以请[主要作者/维护者](https://muzing.top/about/)喝一杯冰可乐 :beer:。
 
-![微信收款码](./Resources/Images/muzing-WeChat-Collection.png)
+![微信赞赏码](./Resources/Images/muzing-WeChat-Collection.png)
