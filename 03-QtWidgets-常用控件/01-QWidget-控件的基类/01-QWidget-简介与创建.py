@@ -21,13 +21,13 @@ class MyWidget(QtWidgets.QWidget):
         # 窗口会被自动修饰标题、最小化最大化关闭按钮等，称为「框架」，可以手动修改其行为
         self.setWindowTitle("QWidget简介")  # 设置窗口标题
         self.resize(800, 600)  # 设置大小
-        self.setup_ui() # 初始化ui
+        self.setup_ui()
 
-    def setup_ui(self) -> None:
+    def setup_ui(self) -> None:  
         """设置界面"""
 
         # 创建一个名为red的QWidget
-        red = QtWidgets.QWidget(self)  # red的父控件为self,故不成为单独窗口
+        red = QtWidgets.QWidget(self)  # reSd的父控件为self,故不成为单独窗口
         red.resize(100, 100)
         red.setStyleSheet("background-color: red;")
         red.move(300, 100)

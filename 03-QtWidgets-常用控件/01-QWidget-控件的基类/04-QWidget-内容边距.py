@@ -24,7 +24,7 @@ class MyWidget(QtWidgets.QWidget):
         label.setStyleSheet("background-color: cyan; font-size: 30px;")
 
         # 设置内容边距，距离左上角100 200像素
-        label.setContentsMargins(100, 200, 0, 0)
+        label.setContentsMargins(0, 200, 0, 0)
 
         # 获取边距
         print(label.contentsMargins())
