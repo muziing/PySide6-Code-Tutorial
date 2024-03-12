@@ -69,7 +69,7 @@ class MyWidget(QtWidgets.QWidget):
     def test_01(self):
         """测试设置焦点功能"""
         # self.button.clicked.connect(self.pte.setFocus)  # type: ignore
-        self.button.clicked.connect(self.focusNextChild)  # type: ignore
+        self.button.clicked.connect(self.focusNextChild)  # type: ignore  使用按键触发切换焦点
         self.button.clicked.connect(lambda: print(self.button.hasFocus()))  # type: ignore
         self.button.clicked.connect(lambda: print(self.le.hasFocus()))  # type: ignore
         self.button.clicked.connect(lambda: print(self.focusWidget()))  # type: ignore

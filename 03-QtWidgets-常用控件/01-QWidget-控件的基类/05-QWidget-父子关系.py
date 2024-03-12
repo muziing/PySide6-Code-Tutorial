@@ -18,7 +18,7 @@ QWidget 提供了多种API来获取（访问）其父子控件
 class MyWidget(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("QWidget-父子关系")
+        self.setWindowTitle("QWidget-父子关系") 
         self.resize(400, 300)
         self.setup_ui()
         self.test_01()
@@ -35,7 +35,7 @@ class MyWidget(QtWidgets.QWidget):
         self.label_2.setPixmap(QtGui.QPixmap("../../Resources/Icons/Python_128px.png"))
         self.label_2.move(100,150)
         self.label_2.setParent(self)  # 指定父控件
-
+ 
     def test_01(self) -> None:
         """测试访问子控件功能"""
         pprint(self.children())  # 打印所有子控件，以列表返回，顺序同添加顺序
