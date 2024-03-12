@@ -5,7 +5,7 @@ def get_sub_classes(class_):
     """递归地显示某一类的所有子类"""
     for subclass in class_.__subclasses__():
         print(subclass)
-        if len(class_.__subclasses__()) > 0:
+        if len(class_.__subclasses__()) > 0: # 递归出口
             get_sub_classes(subclass)
 
 

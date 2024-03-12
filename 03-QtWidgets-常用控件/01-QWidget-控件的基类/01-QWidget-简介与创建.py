@@ -21,7 +21,7 @@ class MyWidget(QtWidgets.QWidget):
         # 窗口会被自动修饰标题、最小化最大化关闭按钮等，称为「框架」，可以手动修改其行为
         self.setWindowTitle("QWidget简介")  # 设置窗口标题
         self.resize(800, 600)  # 设置大小
-        self.setup_ui()
+        self.setup_ui() # 初始化ui
 
     def setup_ui(self) -> None:
         """设置界面"""
