@@ -39,6 +39,7 @@ class MyWidget(QtWidgets.QWidget):
 
         self.cb.stateChanged.connect(test_slot)
 
+
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = MyWidget()

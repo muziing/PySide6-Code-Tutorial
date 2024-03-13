@@ -63,15 +63,15 @@ class MyWidget(QtWidgets.QWidget):
         )  # 以图片像素点位置26,26为热点（光标实际所在位置坐标）
         self.setCursor(my_cursor)
 
-        # 设置label中的光标为Qt内置的其他光标 
-        self.label.setCursor(Qt.ForbiddenCursor) # 设置label中的光标
+        # 设置label中的光标为Qt内置的其他光标
+        self.label.setCursor(Qt.ForbiddenCursor)  # 设置label中的光标
         # self.label.setCursor(Qt.OpenHandCursor)
 
     def test_02(self) -> None:
         """测试获取光标"""
 
         current_cursor = self.cursor()
-        self.button.clicked.connect(lambda: print(current_cursor.pos()))  # type: ignore 设置鼠标点击事件 
+        self.button.clicked.connect(lambda: print(current_cursor.pos()))  # type: ignore 设置鼠标点击事件
 
 
 if __name__ == "__main__":

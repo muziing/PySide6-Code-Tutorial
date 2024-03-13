@@ -23,7 +23,7 @@ class MyWidget(QtWidgets.QWidget):
         self.resize(800, 600)  # 设置大小
         self.setup_ui()
 
-    def setup_ui(self) -> None:  
+    def setup_ui(self) -> None:
         """设置界面"""
 
         # 创建一个名为red的QWidget

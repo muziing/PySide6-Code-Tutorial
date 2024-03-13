@@ -28,9 +28,9 @@ class MyWidget(QtWidgets.QWidget):
 
     def setup_ui(self) -> None:
         """设置界面"""
-        self.label = QtWidgets.QLabel("标签", self) # 指定父组件为: MyWidget class
+        self.label = QtWidgets.QLabel("标签", self)  # 指定父组件为: MyWidget class
         self.label.resize(200, 200)
-        self.label.setStyleSheet("background-color: #00ff00;") # 设置背景颜色
+        self.label.setStyleSheet("background-color: #00ff00;")  # 设置背景颜色
         self.label.move(50, 50)
 
         self.text_edit = QtWidgets.QTextEdit(self)
@@ -46,7 +46,7 @@ class MyWidget(QtWidgets.QWidget):
     def test_01(self) -> None:
         """测试可见与不可见"""
 
-        @QtCore.Slot()   # 显示声明这是一个槽函数
+        @QtCore.Slot()  # 显示声明这是一个槽函数
         def test_slot() -> None:
             if self.label.isVisible():
                 self.label.setVisible(False)
