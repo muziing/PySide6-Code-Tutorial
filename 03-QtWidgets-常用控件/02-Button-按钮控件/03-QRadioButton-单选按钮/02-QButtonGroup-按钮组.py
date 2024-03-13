@@ -50,6 +50,7 @@ class MyWidget(QtWidgets.QWidget):
 
     def test_01(self) -> None:
         """测试按钮组"""
+        # 将单选按钮添加进按钮组
         gender_group = QtWidgets.QButtonGroup(self)  # 创建按钮组
         gender_group.addButton(self.rb_male)  # 将按钮添加至按钮组
         gender_group.addButton(self.rb_female)  # 处于同一组内的按钮间有互斥性

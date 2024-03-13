@@ -64,7 +64,7 @@ class MyWidget(QtWidgets.QWidget):
             QtWidgets.QMessageBox.StandardButton.Ok
         )  # 添加标准按钮，返回值为按钮实例
         # 如果有按钮被按下，则将该按钮的文本打印到终端。
-        message_box.buttonClicked.connect(lambda btn: print(btn.text()))  # type: ignore
+        message_box.buttonClicked.connect(lambda b: print(b.text()))  # type: ignore
 
         # 在主界面上添加一个弹出对话框的按钮，本节功能演示在对话框窗口中而非主窗口中呈现
         pop_btn = QtWidgets.QPushButton("弹出对话框", self)
@@ -77,6 +77,7 @@ class MyWidget(QtWidgets.QWidget):
         """测试按钮默认与自动默认功能"""
         self.ok_btn.setDefault(True)
         self.ok_btn.setAutoDefault(True)
+        # 目前没有看出这俩的区别
         print(f"ok_btn.isDefault({self.ok_btn.isDefault()})")
         print(f"cancel_btn.isDefault({self.cancel_btn.isDefault()})")
 
