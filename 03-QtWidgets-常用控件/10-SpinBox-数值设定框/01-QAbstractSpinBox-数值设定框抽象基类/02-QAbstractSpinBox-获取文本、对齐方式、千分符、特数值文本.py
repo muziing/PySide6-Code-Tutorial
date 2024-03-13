@@ -50,7 +50,9 @@ class MyWidget(QtWidgets.QWidget):
         btn.clicked.connect(lambda: print(spin_box.text()))  # type: ignore
 
         # =================================== 文本对齐方式 ===================================
-        spin_box.setAlignment(QtCore.Qt.AlignmentFlag.AlignHCenter)  # 更改为水平居中对齐，默认为左对齐
+        spin_box.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignHCenter
+        )  # 更改为水平居中对齐，默认为左对齐
 
         # ==================================== 千分符 ===================================
         spin_box.setGroupSeparatorShown(True)  # 显示千分符

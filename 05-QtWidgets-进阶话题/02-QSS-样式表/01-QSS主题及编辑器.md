@@ -67,7 +67,7 @@ class QSSLoader:
 ```python
 app = QApplication(sys.argv)
 window = MainWindow()
- 
+
 style_file = './style.qss'
 style_sheet = QSSLoader.read_qss_file(style_file)
 window.setStyleSheet(style_sheet)

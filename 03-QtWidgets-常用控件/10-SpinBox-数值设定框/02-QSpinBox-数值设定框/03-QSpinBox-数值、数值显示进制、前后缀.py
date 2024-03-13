@@ -58,7 +58,9 @@ class MyWidget(QtWidgets.QWidget):
         spinbox.setSuffix(" cm")  # 设置后缀
         # spinbox.setPrefix("$ ")  # 设置前缀
         print(f"完整文本为{spinbox.text()}")  # 获取文本时会获取到包含前后缀的完整文本
-        print(f"数值为{spinbox.text().removesuffix(spinbox.suffix())}")  # Python3.9提供的移除后缀方法
+        print(
+            f"数值为{spinbox.text().removesuffix(spinbox.suffix())}"
+        )  # Python3.9提供的移除后缀方法
         print(f"数值为{spinbox.cleanText()}")
 
 

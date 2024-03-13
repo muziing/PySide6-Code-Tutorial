@@ -28,8 +28,12 @@ class MyWidget(QtWidgets.QWidget):
         """配置对话框属性功能"""
         self.dialog.setAcceptMode(QtWidgets.QFileDialog.AcceptMode.AcceptOpen)  # 打开模式
         self.dialog.setFileMode(QtWidgets.QFileDialog.FileMode.ExistingFiles)  # 选择现有文件
-        self.dialog.setLabelText(QtWidgets.QFileDialog.DialogLabel.Accept, "选择")  # 为「接受」按键指定文本
-        self.dialog.setLabelText(QtWidgets.QFileDialog.DialogLabel.Reject, "取消")  # 为「拒绝」按键指定文本
+        self.dialog.setLabelText(
+            QtWidgets.QFileDialog.DialogLabel.Accept, "选择"
+        )  # 为「接受」按键指定文本
+        self.dialog.setLabelText(
+            QtWidgets.QFileDialog.DialogLabel.Reject, "取消"
+        )  # 为「拒绝」按键指定文本
 
     def setup_ui(self) -> None:
         """设置界面"""

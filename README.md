@@ -1,4 +1,4 @@
-<img src="./Resources/Icons/Qt_for_Python_128px.png" alt="logo" height="120" align="right" />
+<img src="./Resources/Icons/Qt_for_Python_128px.png" alt="logo" height="128" align="right" />
 
 # PySide6 代码式教程
 
@@ -7,10 +7,10 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/muziing/PySide6-Code-Tutorial)
 ![License](https://img.shields.io/github/license/muziing/PySide6-Code-Tutorial)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/muziing/PySide6-Code-Tutorial)
-[![PySide Version](https://img.shields.io/badge/PySide-6.4-blue)](https://doc.qt.io/qtforpython/index.html)
+[![PySide Version](https://img.shields.io/badge/PySide-6.6-blue)](https://doc.qt.io/qtforpython/index.html)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
-[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+[![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
 
 ## 简介
 
@@ -21,7 +21,7 @@
 - 在自己的机器上实际运行一下，仔细观察一下每个属性值的改变会怎样影响控件的外观行为，可能比静态的文档教程更有效
 - 前身为 GitHub 热度最高的中文 PyQt5 教程 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，目前已有 ![PyQt-Practice Stars](https://img.shields.io/github/stars/muziing/PyQt_practice.svg) 个 Stars
 - 相比 [PyQt-Practice](https://github.com/muziing/PyQt_practice)，改进了项目目录结构，增加了部分内容，更加清晰丰富
-- 使用最新的 Python 与 PySide 版本（目前为`3.10`与`6.4`）
+- 使用最新的 Python 与 PySide 版本（目前为`3.11`与`6.6`）
 
 希望本项目对你我的 Python-GUI 学习之旅有所帮助。
 
@@ -35,33 +35,33 @@
 
 1. Star 本仓库
 2. 通过以下方法之一获取源码
-    - 克隆仓库（推荐）：`git clone https://github.com/muziing/PySide6-Code-Tutorial.git`
-    - 下载 zip：<https://github.com/muziing/PySide6-Code-Tutorial/archive/refs/heads/main.zip>
-    - 查看 [Releases](https://github.com/muziing/PySide6-Code-Tutorial/releases) 界面，下载最新发布版（文件更小）
+   - 克隆仓库（推荐）：`git clone https://github.com/muziing/PySide6-Code-Tutorial.git`
+   - 下载 zip：<https://github.com/muziing/PySide6-Code-Tutorial/archive/refs/heads/main.zip>
+   - 查看 [Releases](https://github.com/muziing/PySide6-Code-Tutorial/releases) 界面，下载最新发布版（文件更小）
 3. 进入项目目录
 
 ### 二、配置虚拟环境与安装依赖
 
-**方式 A** ：[Poetry](https://python-poetry.org/)（推荐）
+**方式 A** ：[venv](https://docs.python.org/zh-cn/3/library/venv.html)（简单易用，推荐）
+
+1. 确保 Python 版本与 [pyproject.toml](./pyproject.toml) 中要求的一致
+2. 创建虚拟环境
+   - Windows: `python -m venv --upgrade-deps venv`
+   - Linux/macOS: `python3 -m venv --upgrade-deps venv`
+3. 激活虚拟环境
+   - Windows: `venv\Scripts\activate`
+   - Linux/macOS: `. venv/bin/activate`
+4. 安装依赖：`pip install -r requirements.txt`
+
+**方式 B** ：[Poetry](https://python-poetry.org/)
 
 1. 确保 Python 版本与 [pyproject.toml](./pyproject.toml) 中要求的一致
 2. 按[官方文档](https://python-poetry.org/docs/#installation)提示安装 Poetry
 3. 创建虚拟环境：`poetry env use /full/path/to/python`（注意替换路径）
-4. 安装依赖：`poetry install --no-dev`
+4. 安装依赖：`poetry install --no-root --only main`
 5. 使用该虚拟环境： `poetry shell`（或在 PyCharm 等 IDE 中配置）
 
 > 更多 Poetry 使用方法信息，请参阅其[官方文档](https://python-poetry.org/docs/)。
-
-**方式 B** ：[venv](https://docs.python.org/zh-cn/3/library/venv.html)（简单易用）
-
-1. 确保 Python 版本与 [pyproject.toml](./pyproject.toml) 中要求的一致
-2. 创建虚拟环境
-    - Windows: `python -m venv --upgrade-deps venv`
-    - Linux/macOS: `python3 -m venv --upgrade-deps venv`
-3. 激活虚拟环境
-    - Windows: `venv\Scripts\activate`
-    - Linux/macOS: `. venv/bin/activate`
-4. 安装依赖：`pip install -r requirements.txt`
 
 **方式 C** ：其他包管理工具
 
@@ -86,7 +86,7 @@
 | [01. HelloWorld - PySide 基本结构](./01-HelloWorld-基本结构)            | 新手上路，PySide6 程序的基本结构                |
 | [02. QtCore - 非GUI的核心功能](./02-QtCore-非GUI的核心功能)                 | 元对象系统、「信号与槽」通信机制等                   |
 | [03. QtWidgets - 常用控件](./03-QtWidgets-常用控件)                     | 按钮、输入框、文本编辑器、下拉菜单、滚动条等等常用控件的功能、用法   |
-| [04. QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)       | 位图、字体、颜色、键盘快捷键等、事件                  |
+| [04. QtGui - 使用GUI功能扩展QtCore](./04-QtGui-使用GUI功能扩展QtCore)       | 位图、字体、颜色、键盘快捷键等、事件（暂未完成）            |
 | [05. QtWidgets - 进阶话题](./05-QtWidgets-进阶话题)                     | 布局管理器、QSS样式、主窗口控件等                  |
 | [06. Model/View - 模型与视图、数据库](./06-ModelView-模型与视图、数据库)          | 模型与视图、与数据库交互                        |
 | [07. Packaging - 静态资源编译、打包](./07-Packaging-资源管理与打包)             | 将应用程序打包为 `exe`、将静态资源编译至二进制 `qrc` 文件 |
@@ -97,7 +97,6 @@
 | 目录/文件                                          | 描述                |
 |------------------------------------------------|-------------------|
 | [requirements.txt](./requirements.txt)         | 依赖项，运行本项目必备       |
-| [requirements_dev.txt](./requirements_dev.txt) | 开发依赖项，为本项目提交贡献时需要 |
 | [pyproject.toml](./pyproject.toml)             | 项目配置文件            |
 | [poetry.lock](./poetry.lock)                   | Poetry 依赖项版本约束文件  |
 | [.gitignore](./.gitignore)                     | git 忽略提交规则        |
@@ -140,6 +139,6 @@ PySide6 Code Tutorial 是一个开源项目，非常期待以及感谢你的参�
 
 ## 打赏
 
-本项目的[主要作者/维护者](https://muzing.top/about/)是一名还没有收入的在校学生，如果本项目对你有帮助，希望可以请他喝一杯冰可乐 :beer:。
+如果本项目对你有帮助，可以请[主要作者/维护者](https://muzing.top/about/)喝一杯冰可乐 :beer:。
 
-![微信收款码](./Resources/Images/muzing-WeChat-Collection-QRCode.png)
+![微信赞赏码](./Resources/Images/muzing-WeChat-Collection.png)

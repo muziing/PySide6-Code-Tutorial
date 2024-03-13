@@ -1,14 +1,10 @@
-import sys
-
-from PySide6 import QtCore, QtWidgets
-
 """
 QComboBox 信号
 提供了多种精细的信号供使用
 
 .activated(index: int)
     当用户在组合下拉框中选中一个条目时发射此信号，索引作为参数传递。即使选中项未改变也会发射
-    
+
 .currentIndexChanged(index: int)
     当当前索引由用户交互或编程方式改变时发射此信号，索引作为参数传递。
     若combobox为空或当前索引已重置，则传递条目的 index 或 -1
@@ -18,11 +14,11 @@ QComboBox 信号
 
 .editTextChanged(text: str)
     当启用了可编辑模式，且编辑器中的文本发生改变时发射此信号，新的文本作为参数传递
-    
+
 .highlighted(index: int)
     当用户高亮（光标移入或键盘选择）了弹出菜单中的某一条目时发射此信号
     索引值作为参数传递
-    
+
 .textActivated(text: str)
     当用户选择了条目之一时，发射此信号并将文本作为参数传递
     即使选择未发生改变也会发射此信号
@@ -32,6 +28,10 @@ QComboBox 信号
     文本作为参数传递
 
 """
+
+import sys
+
+from PySide6 import QtCore, QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):

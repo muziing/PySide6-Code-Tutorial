@@ -74,7 +74,9 @@ class MyWidget(QtWidgets.QWidget):
         pos_layout = QtWidgets.QFormLayout()
         pos_layout.addRow(QtWidgets.QLabel("光标当前位于："), self.pos_line_edit)
         pos_layout.addRow(QtWidgets.QLabel("将光标设置到："), self.set_pos_spinbox)
-        pos_layout.addRow(QtWidgets.QLabel(f"{self.point.toTuple()}处的光标位于"), self.pos_at_label)
+        pos_layout.addRow(
+            QtWidgets.QLabel(f"{self.point.toTuple()}处的光标位于"), self.pos_at_label
+        )
         pos_groupbox.setLayout(pos_layout)
 
         # ================ 光标移动风格 =======================

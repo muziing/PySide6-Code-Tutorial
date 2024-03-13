@@ -77,7 +77,9 @@ class MyWidget(QtWidgets.QWidget):
         self.scroll_area.widget().resize(200, 400)  # 尺寸小于滚动区域尺寸
 
         # 设置对齐方式
-        self.scroll_area.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)  # 设置为水平居中、垂直靠底部对齐
+        self.scroll_area.setAlignment(
+            Qt.AlignHCenter | Qt.AlignBottom
+        )  # 设置为水平居中、垂直靠底部对齐
 
     def test_02(self) -> None:
         """测试尺寸控制、确保可见功能"""

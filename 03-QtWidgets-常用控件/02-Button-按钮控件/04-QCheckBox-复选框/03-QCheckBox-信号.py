@@ -30,8 +30,6 @@ class MyWidget(QtWidgets.QWidget):
 
         @QtCore.Slot(int)
         def test_slot(state: int) -> None:
-            print("-------")
-            print(state)
             if state == Qt.Checked.value:
                 print("复选框被选中了！")
             elif state == Qt.Unchecked.value:

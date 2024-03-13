@@ -1,8 +1,3 @@
-import sys
-
-from PySide6 import QtWidgets
-from PySide6.QtCore import Qt
-
 """
 QWidget 键盘输入焦点控制
 
@@ -14,7 +9,7 @@ QWidget 键盘输入焦点控制
 
 https://doc.qt.io/qt-6/qwidget.html#setFocusProxy
 .setFocusPolicy(policy: Qt.FocusPolicy)      设置焦点策略，详见下方Qt.FocusPolicy
-.focusPolicy() -> Qt.FocusPolicy             返回该控件的焦点策略                               
+.focusPolicy() -> Qt.FocusPolicy             返回该控件的焦点策略
 
 Qt.FocusPolicy 具体分为如下数种：
 https://doc.qt.io/qt-6/qt.html#FocusPolicy-enum
@@ -31,6 +26,11 @@ Qt.WheelFocus 补充：若只有一个控件设置为此策略，则需要当前
 .setTabOrder(fist: QWidget, second: QWidget) 将第二个控件从焦点链中移除，并放置到第一个控件之后
 
 """
+
+import sys
+
+from PySide6 import QtWidgets
+from PySide6.QtCore import Qt
 
 
 class MyWidget(QtWidgets.QWidget):
