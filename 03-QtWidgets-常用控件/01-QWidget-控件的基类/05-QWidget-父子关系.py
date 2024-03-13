@@ -33,6 +33,7 @@ class MyWidget(QtWidgets.QWidget):
         self.label_1.move(150, 50)
         self.label_2 = QtWidgets.QLabel()  # 创建时未指定父控件
         self.label_2.setPixmap(QtGui.QPixmap("../../Resources/Icons/Python_128px.png"))
+        self.label_2.move(100, 150)
         self.label_2.setParent(self)  # 指定父控件
 
     def test_01(self) -> None:
@@ -41,7 +42,7 @@ class MyWidget(QtWidgets.QWidget):
 
         # 获取处于制定坐标的子控件
         # 注意：若该坐标无子控件则返回None、似乎对布局管理器无效
-        print(self.childAt(150, 55))
+        print(self.childAt(150, 50))
 
         # 以上方法返回的子控件都可以被操作
         self.childAt(150, 55).setStyleSheet("background-color: cyan;")

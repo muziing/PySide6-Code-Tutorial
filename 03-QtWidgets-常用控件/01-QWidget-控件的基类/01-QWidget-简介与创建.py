@@ -27,7 +27,7 @@ class MyWidget(QtWidgets.QWidget):
         """设置界面"""
 
         # 创建一个名为red的QWidget
-        red = QtWidgets.QWidget(self)  # red的父控件为self,故不成为单独窗口
+        red = QtWidgets.QWidget(self)  # reSd的父控件为self,故不成为单独窗口
         red.resize(100, 100)
         red.setStyleSheet("background-color: red;")
         red.move(300, 100)

@@ -6,7 +6,12 @@ from PySide6 import QtCore, QtWidgets
 
 
 class MyWidget(QtWidgets.QWidget):
+    """__init__ 方法将任何位置参数收集到 args 元组中，
+    并将任何关键字参数收集到 kwargs 字典中，
+    然后将它们作为对象的属性（self）进行赋值。"""
+
     def __init__(self, *args, **kwargs):
+
         super().__init__(*args, **kwargs)  # 调用父类的初始化方法
 
         self.hello = ["你好世界", "Hallo Welt", "Hei maailma", "Hola Mundo", "Привет мир"]
@@ -31,7 +36,7 @@ class MyWidget(QtWidgets.QWidget):
         self.button.clicked.connect(self.magic)  # type: ignore
 
     @QtCore.Slot()
-    def magic(self) -> None:
+    def magic(self) -> None:  # 设定隐式返回值
         """槽函数"""
         self.text.setText(random.choice(self.hello))  # 从列表中随机显示一条问候语
 

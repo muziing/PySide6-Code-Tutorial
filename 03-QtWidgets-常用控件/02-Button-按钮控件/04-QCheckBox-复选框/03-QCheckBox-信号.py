@@ -37,7 +37,7 @@ class MyWidget(QtWidgets.QWidget):
             elif state == Qt.PartiallyChecked.value:
                 print("复选框被部分选中！")
 
-        self.cb.stateChanged.connect(test_slot)  # type: ignore
+        self.cb.stateChanged.connect(test_slot)
 
 
 if __name__ == "__main__":

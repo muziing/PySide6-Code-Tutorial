@@ -28,7 +28,7 @@ class MyWidget(QtWidgets.QWidget):
         self.label = QtWidgets.QLabel("只是一个Label标签", self)  # 创建一个标签子控件
         self.label.move(100, 200)  # 相对父控件（窗口）移动位置
 
-        self.setGeometry(200, 200, 600, 400)  # 可以同时设置其位置与尺寸，计算像素时不包含框架
+        self.setGeometry(200, 200, 600, 600)  # 可以同时设置其位置与尺寸，计算像素时不包含框架
 
     def test_02(self) -> None:
         """测试获取位置功能"""
